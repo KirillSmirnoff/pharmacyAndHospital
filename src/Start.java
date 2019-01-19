@@ -6,7 +6,7 @@ public class Start {
     public static void main(String[] args) {
 
 //        Laboratory lab1a = new Laboratory();
-//        GuiTest gui = new GuiTest();
+       GuiTest gui = new GuiTest();
 //        System.out.println("\nВЫБЕРИТЕ ЛАБОРАТОРУЮ РАБОТУ ОТ 1-3\nДЛЯ ВЫХОДА НАЖМИТЕ 0");
 //        Scanner sc = new Scanner(System.in);
 //       int choiceLab = sc.nextInt();
@@ -46,6 +46,6 @@ public class Start {
 //            }
 //
 //        }
-//gui.gui();
+gui.gui();
     }
 }
