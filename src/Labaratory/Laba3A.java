@@ -5,7 +5,7 @@ import Methods.MyRandom;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// в массиве X(N) найти номера и значение максимального четного
+// в целочисленном массиве X(N) найти номера и значение максимального четного
 // и минимального нечетного элементов мвссива
 
 public class Laba3A {

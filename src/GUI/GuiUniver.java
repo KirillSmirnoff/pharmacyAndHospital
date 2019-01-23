@@ -4,7 +4,7 @@ import java.awt.event.*;//для отслеживания нажатия на к
 import javax.swing.*;// формы надписи кнопки
 
 
- public class GUI extends JFrame {
+ public class GuiUniver extends JFrame {
 //    Laboratory test = new Laboratory();
 
     private JButton button = new JButton("Расчитать");
@@ -18,7 +18,7 @@ import javax.swing.*;// формы надписи кнопки
     //JCheckBox checkbox = new JCheckBox("check", false);
 
 
-    public GUI() {
+    public GuiUniver() {
         this.setTitle("ПРОГРАММА РАСЧЕТА");
         this.setBounds(1000, 100, 450, 200);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,8 +58,8 @@ import javax.swing.*;// формы надписи кнопки
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                int g = Integer.parseInt(input1.getText());
-                int r = Integer.parseInt(input2.getText());
+//                int g = Integer.parseInt(input1.getText());
+//                int r = Integer.parseInt(input2.getText());
 //               test.solve( g,r);
 //               System.out.println(Arrays.toString(test.solve(g,r)));
 
