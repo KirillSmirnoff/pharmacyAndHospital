@@ -1,5 +1,6 @@
 import GUI.Gui;
 import GUI.GuiLaba3A;
+import GUI.GuiLaba3B;
 
 import java.util.Scanner;
 
@@ -9,10 +10,9 @@ public class Start {
         Scanner sc = new Scanner(System.in);
         Laboratory lab1a = new Laboratory();
         Gui gui;
-
         System.out.println("\nДЛЯ РАБОТЫ ПРОГРАММЫ В КОНСОЛЬНОМ РЕЖИМЕ НАЖМИТЕ 1\n" +
                 "\nДЛЯ РАБОТЫ ПРОГРАММЫ В ГРАФИЧЕСКОМ РЕЖИМЕ НАЖМИТЕ 2");
-
+//
         int mode = sc.nextInt();
 
         if (mode == 2)
@@ -26,7 +26,7 @@ public class Start {
             switch (choiceLab) {
                 case 1:
                     System.out.println("ЛАБОРАТОРНАЯ РАБОТА 1 СОСТОИТ ИЗ 2 ЗАДАЧ\n ВЫБЕРИТЕ 1 ИЛИ 2");
-//        Scanner sc = new Scanner(System.in);
+       // Scanner sc = new Scanner(System.in);
                     int choice1 = sc.nextInt();
                     if (choice1 == 1)
                         lab1a.laba1A();

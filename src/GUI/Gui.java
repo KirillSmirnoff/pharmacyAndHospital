@@ -8,13 +8,13 @@ import java.awt.event.ActionListener;
 
 public class Gui extends JFrame {
 GuiLaba3A guiLaba3A;
-Laba3B laba3B;
+GuiLaba3B guiLaba3B;
     public Gui() {
         this.setTitle("Лабораторные задачи");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 //           this.setBounds(1000, 100, 640, 480);
-        this.setSize(450, 200);
+        this.setSize(400, 240);
         this.setResizable(false);
 //        this.setLayout(new FlowLayout());
 
@@ -42,6 +42,7 @@ Laba3B laba3B;
 
         JPanel panel4 = new JPanel(null);
         panel4.setLayout(new FlowLayout());
+
         panel4.add(button3A);
         button3A.addActionListener(new ActionListener() {
             @Override
@@ -49,11 +50,12 @@ Laba3B laba3B;
                 guiLaba3A = new GuiLaba3A();
             }
         });
+
         panel4.add(button3B);
         button3B.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                laba3B = new Laba3B();
+                guiLaba3B = new GuiLaba3B();
             }
         });
 

@@ -26,4 +26,25 @@ public class MaxEvenNumberMinOddNumber {
         System.out.println("Максимальное четное значение:  "+max + "  номер в массиве "+ maxIndex +"\n\n"
                 + "Минимальное нечетное значение:  "+min+ "  номер в массиве "+ minIndex);
     }
+
+    public void maxEvenNumberMinOddNumberGui(int mass[]){
+        for (int i = 0; i < mass.length; i++){
+            if (mass[i] % 2 == 0) {
+                if (mass[i] > max) {
+                    max = mass[i];
+                    maxIndex =i;
+                }
+            }
+            else if (mass[i] < min) {
+                min = mass[i];
+                minIndex = i;
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Максимальное четное значение:  "+max + "  номер в массиве "+ maxIndex +"\n"
+                + "Минимальное нечетное значение:  "+min+ "  номер в массиве "+ minIndex+"\n\n";
+    }
 }
