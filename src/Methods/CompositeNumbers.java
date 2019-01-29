@@ -1,7 +1,6 @@
 package Methods;
 
-import Methods.AddToArray;
-
+import GUI.GuiLaba2B;
 import java.util.Arrays;
 
 public class CompositeNumbers {
@@ -26,15 +25,23 @@ public class CompositeNumbers {
         }
     }
 
-    public void print(){
+    public  void print(){
         if(compositeNumber==0)
             System.out.println("составных чисел нет");
         else
         System.out.println("составных чисел: " + compositeNumber+toString());
     }
 
+    public  void printGui(){
+        if(compositeNumber==0)
+            GuiLaba2B.textArea.append("составных чисел нет\n");
+        else
+            GuiLaba2B.textArea.append("составных чисел: " + compositeNumber+toString()+"\n");
+    }
+
+
     @Override
-    public String toString() {
+    public  String toString() {
         return Arrays.toString(arrayComposite.listArrayToArray());
     }
 }

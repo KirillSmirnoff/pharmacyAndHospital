@@ -1,7 +1,6 @@
 package Methods;
 
-import Methods.AddToArray;
-
+import GUI.GuiLaba2B;
 import java.util.Arrays;
 
 public class PrimeNumbers {
@@ -32,6 +31,14 @@ public class PrimeNumbers {
             System.out.println("простых чисел нет");
         else
         System.out.println("простых чисел: " + primeNumber+toString());
+    }
+
+
+    public void printGui(){
+        if(primeNumber==0)
+            GuiLaba2B.textArea.append("простых чисел нет\n");
+        else
+            GuiLaba2B.textArea.append("простых чисел: " + primeNumber+toString()+"\n");
     }
 
     @Override

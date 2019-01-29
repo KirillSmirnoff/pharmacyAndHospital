@@ -11,17 +11,17 @@ import Methods.*;
 public class GuiLaba3A extends JFrame {
 
     private int x, maxBoundary, minBoundary;
-
     private MaxEvenNumberMinOddNumber maxMin = new MaxEvenNumberMinOddNumber();
     private JTextArea textArea = new JTextArea();
 
     public GuiLaba3A() {
 
-        this.setTitle("Лабораторная 3А");
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setBounds(1000, 100, 640, 480);
-        this.setResizable(false);
+        setTitle("Лабораторная 3А");
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setBounds(1000, 100, 640, 480);
+        setResizable(false);
         textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
 
         //        this.setLocationRelativeTo(null);
 //        panel1.setLayout(new BoxLayout(panel1,BoxLayout.Y_AXIS));
@@ -65,7 +65,7 @@ public class GuiLaba3A extends JFrame {
         scrollPane.setBounds(25, 220, 590, 220);
         button.setBounds(250, 175, 110, 25);
 
-        this.getContentPane().add(panel1);
+        getContentPane().add(panel1);
 
         button.addActionListener(new ActionListener() {
             @Override
@@ -77,7 +77,7 @@ public class GuiLaba3A extends JFrame {
             }
         });
 
-        this.setVisible(true);
+        setVisible(true);
     }
 
     private void calculate() {

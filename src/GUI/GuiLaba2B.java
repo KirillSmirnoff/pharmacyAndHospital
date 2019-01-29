@@ -1,13 +1,15 @@
 package GUI;
 
+import Methods.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class GuiLaba2B extends JFrame {
 
-   private JTextArea textArea = new JTextArea();
-    private int x,maxBoundary, minBoundary;
+    public static JTextArea textArea = new JTextArea();
+    private int x, maxBoundary, minBoundary;
 
     public GuiLaba2B() {
 
@@ -17,7 +19,7 @@ public class GuiLaba2B extends JFrame {
         setResizable(false);
         setLayout(null);
         textArea.setLineWrap(true);
-
+        textArea.setWrapStyleWord(true);
 
         JLabel opisanie = new JLabel("Найти количество совершенных  и простых чисел в массиве");
         add(opisanie);
@@ -54,6 +56,7 @@ public class GuiLaba2B extends JFrame {
         JButton button = new JButton("Расчитать");
         add(button);
         button.setBounds(250, 175, 110, 25);
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,15 +67,32 @@ public class GuiLaba2B extends JFrame {
             }
         });
 
-
         setVisible(true);
     }
 
-    void calculate(){
-        textArea.append("GOOOOOOOL");
+    void calculate() {
+
+        MyRandom rdm = new MyRandom(maxBoundary, minBoundary);
+        int[] aray = new int[x];
+        rdm.randomToArray(aray, x);
+
+        textArea.append("\nЭлементы массива" + Arrays.toString(aray) + "\n");
+
+        CompositeNumbers composite = new CompositeNumbers();
+        PrimeNumbers prime = new PrimeNumbers();
+        PerfectNumbers perfect = new PerfectNumbers();
+
+        for (int z : aray) {
+            composite.CompositeNumbersCalculate(z);
+            perfect.perfectNumbersCalculate(z);
+            prime.PrimeNumbersCalculate(z);
+        }
+
+        composite.printGui();
+        prime.printGui();
+        perfect.printGui();
     }
 }
-
 
 
 /*

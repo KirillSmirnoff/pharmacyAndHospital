@@ -1,7 +1,6 @@
 package Methods;
 
-import Methods.AddToArray;
-
+import GUI.GuiLaba2B;
 import java.util.Arrays;
 
 public class PerfectNumbers {
@@ -31,6 +30,13 @@ public class PerfectNumbers {
             System.out.println("совершенных чисел: " + perfectNumber + toString());
     }
 
+
+    public void printGui() {
+        if (perfectNumber == 0)
+            GuiLaba2B.textArea.append("совершенных чисел нет\n");
+        else
+            GuiLaba2B.textArea.append("совершенных чисел: " + perfectNumber + toString()+"\n");
+    }
 
     @Override
     public String toString() {

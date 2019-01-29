@@ -20,6 +20,11 @@ public class Fraction {
         return fraction;
     }
 
+    public double guiFractionToDecimal(int num, int den) {
+        fraction = (double) num/den;
+        return fraction;
+
+    }
 
 }
 

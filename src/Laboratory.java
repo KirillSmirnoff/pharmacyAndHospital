@@ -72,15 +72,12 @@ public class Laboratory {
         double b = f2.fractionToDecimal();
         double c = f3.fractionToDecimal();
 
-
         if ((a >= b) && (a >= c))
             System.out.println("\nНаибольшая дробь " + a);
         else if ((b >= a) && (b >= c))
             System.out.println("\nНаибольшая дробь " + b);
         else if ((c >= b) && (c >= a))
             System.out.println("\nНаибольшая дробь " + c);
-
-
     }
 
     public void laba2A(){
@@ -150,7 +147,6 @@ public class Laboratory {
 //        int y = 4;
 
         int[][] matrix = new int[x][y];      //инициализация массива
-
         rdm.randomToArray(matrix, x, y);      //метод записи в  масив значений с помошью RANDOM
 
 //matrix[0][0]=5;  matrix[0][1]=1;  matrix[0][2]=5;  matrix[0][3]=6;

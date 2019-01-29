@@ -10,19 +10,19 @@ import java.io.IOException;
 
 
 public class Gui extends JFrame {
-GuiLaba3A guiLaba3A;
-GuiLaba3B guiLaba3B;
-GuiLaba2B guiLaba2B;
+
+    GuiLaba1A guiLaba1A;
+    GuiLaba1B guiLaba1B;
+    GuiLaba2B guiLaba2B;
+    GuiLaba3A guiLaba3A;
+    GuiLaba3B guiLaba3B;
 
     public Gui() {
         setTitle("Лабораторные задачи");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.setLocationRelativeTo(null);
         setBounds(700, 200, 400, 240);
-//        this.setSize(400, 240);
         setResizable(false);
         setLayout(new FlowLayout());
-//        this.setBackground(g);
 
         JMenuBar menuBar = new JMenuBar();
 
@@ -41,14 +41,38 @@ GuiLaba2B guiLaba2B;
         JMenuItem laba1A = new JMenuItem("A");
         JMenuItem laba1B = new JMenuItem("B");
         laba1.add(laba1A);
+        laba1A.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiLaba1A = new GuiLaba1A();
+            }
+        });
         laba1.add(laba1B);
+        laba1B.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiLaba1B = new GuiLaba1B();
+            }
+        });
         laboratories.add(laba1);
 
         JMenu laba2 = new JMenu("Laboratory 2");
         JMenuItem laba2A = new JMenuItem("A");
         JMenuItem laba2B = new JMenuItem("B");
         laba2.add(laba2A);
+        laba2A.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // not do work
+            }
+        });
         laba2.add(laba2B);
+        laba2B.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiLaba2B = new GuiLaba2B();
+            }
+        });
         laboratories.add(laba2);
 
         JMenu laba3 = new JMenu("Laboratory 3");
@@ -75,19 +99,16 @@ GuiLaba2B guiLaba2B;
         laboratories.add(laba3);
         menuBar.add(laboratories);
 
-
-
         JMenu help = new JMenu("Help");
         JMenuItem about = new JMenuItem("About");
         help.add(about);
         menuBar.add(help);
 
-
         this.setJMenuBar(menuBar);
 
         setVisible(true);
     }
-
+}
 /*
     public Gui() {
         this.setTitle("Лабораторные задачи");
@@ -154,5 +175,3 @@ GuiLaba2B guiLaba2B;
 
     }
 */
-
-}

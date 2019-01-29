@@ -1,7 +1,6 @@
 package GUI;
 
-import Methods.MyRandom;
-
+import Methods.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,9 +8,8 @@ import java.awt.event.ActionListener;
 
 public class GuiLaba3B extends JFrame {
 
-    private int x,y, maxBoundary, minBoundary;
-
-    private JTextArea textArea = new JTextArea();
+    private int x, y, maxBoundary, arr, minBoundary;
+    public static JTextArea textArea = new JTextArea();
 
     public GuiLaba3B() {
         this.setTitle("Лабораторнка 3B");
@@ -54,20 +52,20 @@ public class GuiLaba3B extends JFrame {
         panel.add(scrollPane);
         panel.add(button);
 
-        opisanie1.setBounds(150,10,610,25);
-        opisanie2.setBounds(70,30,610,25);
-        opisanie3.setBounds(200,50,610,25);
-        opisanie4.setBounds(70,70,610,25);
-        lstroka.setBounds(130,100,310,25);
-        stroka.setBounds(450,100,100,25);
-        lstolbec.setBounds(130,130,310,25);
-        stolbec.setBounds(450,130,100,25);
-        label1.setBounds(130,160,300,25);
-        textmin.setBounds(450,160,100,25);
-        label2.setBounds(130,190,310,25);
-        textmax.setBounds(450,190,100,25);
-        button.setBounds(300,230,110,25);
-        scrollPane.setBounds(28,270,650,350);
+        opisanie1.setBounds(150, 10, 610, 25);
+        opisanie2.setBounds(70, 30, 610, 25);
+        opisanie3.setBounds(200, 50, 610, 25);
+        opisanie4.setBounds(70, 70, 610, 25);
+        lstroka.setBounds(130, 100, 310, 25);
+        stroka.setBounds(450, 100, 100, 25);
+        lstolbec.setBounds(130, 130, 310, 25);
+        stolbec.setBounds(450, 130, 100, 25);
+        label1.setBounds(130, 160, 300, 25);
+        textmin.setBounds(450, 160, 100, 25);
+        label2.setBounds(130, 190, 310, 25);
+        textmax.setBounds(450, 190, 100, 25);
+        button.setBounds(300, 230, 110, 25);
+        scrollPane.setBounds(28, 270, 650, 350);
 
         this.getContentPane().add(panel);
 
@@ -86,13 +84,25 @@ public class GuiLaba3B extends JFrame {
 
     }
 
-    private void calculate(){
-        MyRandom random = new MyRandom(maxBoundary,minBoundary);
+    private void calculate() {
+        MyRandom random = new MyRandom(maxBoundary, minBoundary);
+        NegativeNumber negative = new NegativeNumber();
+        SaddlePoint saddle = new SaddlePoint();
 
         int[][] matrix = new int[x][y];      //инициализация массива
         random.randomToArray(matrix, x, y);      //метод записи в  масив значений с помошью RANDOM
 
         textArea.append("\n Содержимое массива\n");
 
+        for (int f = 0; f < x; f++) {
+            for (int h = 0; h < y; h++) {
+                arr = matrix[f][h];
+                textArea.append("" + arr + "    ");
+            }
+            textArea.append("\n");
         }
+
+        negative.negativeNumberWithZeroGui(matrix, x, y);
+        saddle.saddlePointGui(matrix, x, y);
     }
+}

@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class GuiLaba1B extends JFrame {
 
-    private int fr1num,fr1den, fr2num,fr2den, fr3num, fr3den;
+    private int fr1num, fr1den, fr2num, fr2den, fr3num, fr3den;
     JTextArea textArea = new JTextArea();
 
     public GuiLaba1B() {
@@ -19,6 +19,7 @@ public class GuiLaba1B extends JFrame {
         setResizable(false);
         setLayout(null);
         textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
 
         JLabel opisanie = new JLabel("ОПРЕДЕЛИТЬ КАКАЯ ИЗ ТРЕХ ДРОБЕЙ НАИБОЛЬШАЯ");
         add(opisanie);
@@ -86,23 +87,23 @@ public class GuiLaba1B extends JFrame {
         setVisible(true);
     }
 
-  private void calculate(){
+    private void calculate() {
         Fraction f1 = new Fraction();
         Fraction f2 = new Fraction();
         Fraction f3 = new Fraction();
 
-        double a = f1.guiFractionToDecimal(fr1num,fr1den);
-      double b = f2.guiFractionToDecimal(fr2num,fr2den);
-      double c = f3.guiFractionToDecimal(fr3num,fr3den);
-textArea.append("\nвы вели дроби\n"+a+"\n"+b+"\n"+c+"\n");
+        double a = f1.guiFractionToDecimal(fr1num, fr1den);
+        double b = f2.guiFractionToDecimal(fr2num, fr2den);
+        double c = f3.guiFractionToDecimal(fr3num, fr3den);
+
+        textArea.append("\nвы ввели дроби\n" + a + "\n" + b + "\n" + c + "\n");
+
         if ((a >= b) && (a >= c))
             textArea.append("\nНаибольшая дробь " + a);
         else if ((b >= a) && (b >= c))
             textArea.append("\nНаибольшая дробь " + b);
         else if ((c >= b) && (c >= a))
             textArea.append("\nНаибольшая дробь " + c);
-
-
     }
 
 }
