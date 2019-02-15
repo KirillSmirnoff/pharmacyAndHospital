@@ -68,7 +68,7 @@ private int saddlePoint;
                 max = Integer.MIN_VALUE;
 
                 GuiLaba3B.textArea.append("\nВ данном массиве число "+saddlePoint+" является седловой точкой матрицы\n"
-                        + "\nНаходяшейся на пересечении  " + column + " столбца и " + row+" строки");
+                        + "\nНаходяшейся на пересечении  " + column + " столбца и " + row+" строки\n");
             }
 //            else {
             min = Integer.MAX_VALUE;

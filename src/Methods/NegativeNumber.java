@@ -42,7 +42,7 @@ public class NegativeNumber {
                         }
                         j++;
                         if (h == (y - 1)) {
-                            GuiLaba3B.textArea.append("\nв строке " + i + " отрицательных элементов " + negativeNumber);
+                            GuiLaba3B.textArea.append("\nв строке " + i + " отрицательных элементов " + negativeNumber+"\n");
                             negativeNumber = 0;
 
                         }

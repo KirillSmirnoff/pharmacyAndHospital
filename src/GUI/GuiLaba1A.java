@@ -64,7 +64,7 @@ public class GuiLaba1A extends JFrame {
 
     void calculate(){
         Formula f = new Formula();
-        f.solveAllInOneGui(x,y);
+        f.solveGui(x,y);
 
     }
 }

@@ -97,7 +97,7 @@ public class GuiLaba3B extends JFrame {
         for (int f = 0; f < x; f++) {
             for (int h = 0; h < y; h++) {
                 arr = matrix[f][h];
-                textArea.append("" + arr + "    ");
+                textArea.append(String.format("%10d",arr));
             }
             textArea.append("\n");
         }

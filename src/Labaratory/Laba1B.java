@@ -5,7 +5,7 @@ import Methods.Fraction;
 import java.util.Scanner;
 
 public class Laba1B {
-//    public  void laba1B() {
+//    public  void solveLaboratory1B() {
 //        Fraction f1 = new Fraction();
 //        Fraction f2 = new Fraction();
 //        Fraction f3 = new Fraction();

@@ -10,7 +10,7 @@ import Methods.SaddlePoint;
 import java.util.Scanner;
 
 public class Laba3B {
-//    public void laba3B() {
+//    public void solveLaboratory3B() {
 //
 //        NegativeNumber negative = new NegativeNumber();
 //        SaddlePoint saddle = new SaddlePoint();

@@ -9,7 +9,7 @@ import java.util.Scanner;
 // и минимального нечетного элементов мвссива
 
 public class Laba3A {
-//    public void laba3A() {
+//    public void solveLaboratory3A() {
 //
 //        MaxEvenNumberMinOddNumber maxMin = new MaxEvenNumberMinOddNumber();
 //        MyRandom rdm = new MyRandom(500, 10);
