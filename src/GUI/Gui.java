@@ -5,24 +5,38 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+import java.awt.image.BufferedImage;
+import java.io.*;
 
 
 public class Gui extends JFrame {
 
-    GuiLaba1A guiLaba1A;
-    GuiLaba1B guiLaba1B;
-    GuiLaba2B guiLaba2B;
-    GuiLaba3A guiLaba3A;
-    GuiLaba3B guiLaba3B;
+    private GuiLaba1A guiLaba1A;
+    private GuiLaba1B guiLaba1B;
+    private GuiLaba2B guiLaba2B;
+    private GuiLaba3A guiLaba3A;
+    private GuiLaba3B guiLaba3B;
+
+    private static final String ABOUT = "about.txt";
 
     public Gui() {
         setTitle("Лабораторные задачи");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(700, 200, 400, 240);
+        setBounds(700, 200, 400, 270);
         setResizable(false);
         setLayout(new FlowLayout());
+
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(new File("politeh.png"));
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Not found background picture",
+                    "MESSAGE",JOptionPane.INFORMATION_MESSAGE );
+        }
+        if (image!=null) {
+            JLabel label = new JLabel(new ImageIcon(image));
+            this.add(label);
+        }
 
         JMenuBar menuBar = new JMenuBar();
 
@@ -33,6 +47,7 @@ public class Gui extends JFrame {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.exit(1);
             }
         });
 
@@ -103,75 +118,30 @@ public class Gui extends JFrame {
         JMenuItem about = new JMenuItem("About");
         help.add(about);
         menuBar.add(help);
+        about.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    JOptionPane.showMessageDialog(null, printAbout());
+                }
+        });
 
         this.setJMenuBar(menuBar);
 
         setVisible(true);
     }
-}
-/*
-    public Gui() {
-        this.setTitle("Лабораторные задачи");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-//           this.setBounds(1000, 100, 640, 480);
-        this.setSize(400, 240);
-        this.setResizable(false);
-//        this.setLayout(new FlowLayout());
 
-//        JLabel label = new JLabel("Лабораторный работы состоят из трех задач в каждой по залания");
-
-        JButton button1A = new JButton("A");
-        JButton button1B = new JButton("B");
-        JButton button2A = new JButton("A");
-        JButton button2B = new JButton("B");
-        JButton button3A = new JButton("A");
-        JButton button3B = new JButton("B");
-
-//        JPanel panel1 = new JPanel(null);
-
-
-        JPanel panel2 = new JPanel(null);
-        panel2.setLayout(new FlowLayout());
-        panel2.add(button1A);
-        panel2.add(button1B);
-
-        JPanel panel3 = new JPanel(null);
-        panel3.setLayout(new FlowLayout());
-        panel3.add(button2A);
-        panel3.add(button2B);
-
-        JPanel panel4 = new JPanel(null);
-        panel4.setLayout(new FlowLayout());
-
-        panel4.add(button3A);
-        button3A.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                guiLaba3A = new GuiLaba3A();
+    private StringBuilder printAbout(){
+        String s;
+        StringBuilder x = new StringBuilder();
+        try(BufferedReader about = new BufferedReader(new FileReader(ABOUT))) {
+            while ((s = about.readLine()) != null) {
+                x.append(s+"\n");
+//                x += s + "\n";
             }
-        });
-
-        panel4.add(button3B);
-        button3B.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                guiLaba3B = new GuiLaba3B();
-            }
-        });
-
-        JTabbedPane tabbedPane1 = new JTabbedPane(JTabbedPane.BOTTOM);
-//        tabbedPane1.setBounds(10,36,600,400);
-        tabbedPane1.addTab("Aboat", new JLabel("Лабораторные работы состоят из трех задач в каждой\n по 2 залания"));
-
-        tabbedPane1.addTab("Лаба 1",panel2);  // включаем панель в состав вкладки CHEAT
-        tabbedPane1.addTab("Лаба 2",panel3);
-        tabbedPane1.addTab("Лаба 3",panel4);
-
-        this.add(tabbedPane1);
-
-
-        this.setVisible(true);
-
+        }catch (IOException e){
+        JOptionPane.showMessageDialog(null,"Not Found description");
+        }
+        return x;
     }
-*/
+
+}
