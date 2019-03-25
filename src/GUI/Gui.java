@@ -78,7 +78,7 @@ public class Gui extends JFrame {
         laba2A.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // not do work
+                JOptionPane.showMessageDialog(null,"Runtime error!","", JOptionPane.ERROR_MESSAGE);
             }
         });
         laba2.add(laba2B);
@@ -133,8 +133,8 @@ public class Gui extends JFrame {
     private StringBuilder printAbout(){
         String s;
         StringBuilder x = new StringBuilder();
-        try(BufferedReader about = new BufferedReader(new FileReader(ABOUT))) {
-            while ((s = about.readLine()) != null) {
+        try(BufferedReader reader = new BufferedReader(new FileReader(ABOUT))) {
+            while ((s = reader.readLine()) != null) {
                 x.append(s+"\n");
 //                x += s + "\n";
             }

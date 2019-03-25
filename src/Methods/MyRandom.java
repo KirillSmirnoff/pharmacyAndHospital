@@ -16,23 +16,19 @@ public class MyRandom extends Random {
 
     public void randomToArray(int mass[][], int row, int column) {           //для X(M,N) массива
 
-        MyRandom twoDemension = new MyRandom(maxBoundary, minBoundary);
-
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
 
-                mass[i][j] = twoDemension.nextInt(maxBoundary) + (minBoundary);
+                mass[i][j] = nextInt(maxBoundary) + (minBoundary);
             }
 
         }
     }
 
-    public void randomToArray(int mass[],int x){                  //для X(N) массива
-
-        MyRandom oneDemension = new MyRandom(maxBoundary, minBoundary);
-
-        for (int i = 0; i < mass.length; i++)
-            mass[i] = oneDemension.nextInt(maxBoundary) + (minBoundary);
-
+    public void randomToArray(int[]mass,int x){                  //для X(N) массива
+        if (x!=0) {
+            mass[x - 1] = nextInt(maxBoundary) + (minBoundary);
+            randomToArray(mass,x-1);
+        }
     }
 }
