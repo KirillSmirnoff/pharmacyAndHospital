@@ -6,26 +6,25 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-    public void setNumerator(int ch) {
-        numerator = ch;
+    public Fraction(int numerator, int denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
-
-    public void setDenominator(int zn) {
-        denominator = zn;
-    }
-
 
     public double fractionToDecimal() {
         fraction = (double) numerator/denominator;
         return fraction;
     }
 
-    public double guiFractionToDecimal(int num, int den) {
-        fraction = (double) num/den;
-        return fraction;
-
+    public static double max(double a,double b,double c){
+        if ((a >= b) && (a >= c))
+            return a;
+        else if ((b >= a) && (b >= c))
+            return b;
+        else if ((c >= b) && (c >= a))
+            return c;
+        return a;
     }
-
 }
 
 

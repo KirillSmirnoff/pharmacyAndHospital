@@ -3,14 +3,20 @@ package GUI;
 import Methods.Formula;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiLaba1A extends JFrame {
+public class GuiLaba1A extends JFrame implements DocumentListener {
 
     public static JTextArea textArea = new JTextArea();
-    private int x,y;
-    public GuiLaba1A(){
+    private JTextField textField1 = new JTextField();
+    private JTextField textField = new JTextField();
+    private JButton button = new JButton("Расчитать");
+    private int x, y;
+
+    GuiLaba1A() {
 
         setTitle("Лабораторная 1А");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -33,12 +39,13 @@ public class GuiLaba1A extends JFrame {
         add(opisanie4);
         opisanie4.setBounds(90, 90, 300, 25);
 
-        JTextField textField = new JTextField();
         add(textField);
+        textField.getDocument().addDocumentListener(this);
         textField.setBounds(450, 60, 100, 25);
 
-        JTextField textField1 = new JTextField();
+
         add(textField1);
+        textField1.getDocument().addDocumentListener(this);
         textField1.setBounds(450, 90, 100, 25);
 
 
@@ -46,25 +53,47 @@ public class GuiLaba1A extends JFrame {
         add(scrollPane);
         scrollPane.setBounds(25, 180, 590, 260);
 
-        JButton button = new JButton("Расчитать");
+
         add(button);
+        button.setEnabled(false);
         button.setBounds(250, 135, 110, 25);
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                x = Integer.parseInt(textField.getText());
-                y = Integer.parseInt(textField1.getText());
-                calculate();
-            }
+
+        button.addActionListener(a -> {
+            x = Integer.parseInt(textField.getText());
+            y = Integer.parseInt(textField1.getText());
+            calculate();
         });
 
         setVisible(true);
     }
 
-    void calculate(){
+   private void calculate() {
         Formula f = new Formula();
-        f.solveGui(x,y);
+        f.solveGui(x, y);
+
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+
+    }
+
+    void action() {
+        if (!(textField.getText().equals("") || textField1.getText().equals("")))
+            button.setEnabled(true);
+        else
+            button.setEnabled(false);
 
     }
 }

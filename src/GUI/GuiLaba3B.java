@@ -1,27 +1,37 @@
 package GUI;
 
 import Methods.*;
+
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiLaba3B extends JFrame {
+public class GuiLaba3B extends JFrame implements DocumentListener {
 
     private int x, y, maxBoundary, arr, minBoundary;
     public static JTextArea textArea = new JTextArea();
+    private JTextField stroka = new JTextField(7);
+    private JTextField stolbec = new JTextField(7);
+    private JTextField textmax = new JTextField(5);
+    private JTextField textmin = new JTextField(5);
+    private JButton button = new JButton("Расчитать");
 
-    public GuiLaba3B() {
-        this.setTitle("Лабораторнка 3B");
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setBounds(500, 100, 700, 670);
-        this.setResizable(false);
+    GuiLaba3B() {
+        setTitle("Лабораторнка 3B");
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setBounds(500, 100, 700, 670);
+        setResizable(false);
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(Color.lightGray);
+
 //        panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
+
         JScrollPane scrollPane = new JScrollPane(textArea);
-        JButton button = new JButton("Расчитать");
         JLabel opisanie1 = new JLabel("Дана целочисленная прямоугольная матрица. Определить:");
         JLabel opisanie2 = new JLabel("1. Количество отрицательных элеметнов в тех строках, которые содержат хотя ");
         JLabel opisanie3 = new JLabel(" бы один нулевой элемент");
@@ -32,10 +42,6 @@ public class GuiLaba3B extends JFrame {
         JLabel label1 = new JLabel("Введите минимальное значение массива");
         JLabel label2 = new JLabel("Введите максимальное значение  массива");
 
-        JTextField stroka = new JTextField(7);
-        JTextField stolbec = new JTextField(7);
-        JTextField textmax = new JTextField(5);
-        JTextField textmin = new JTextField(5);
 
         panel.add(opisanie1);
         panel.add(opisanie2);
@@ -58,30 +64,31 @@ public class GuiLaba3B extends JFrame {
         opisanie4.setBounds(70, 70, 610, 25);
         lstroka.setBounds(130, 100, 310, 25);
         stroka.setBounds(450, 100, 100, 25);
+        stroka.getDocument().addDocumentListener(this);
         lstolbec.setBounds(130, 130, 310, 25);
         stolbec.setBounds(450, 130, 100, 25);
+        stolbec.getDocument().addDocumentListener(this);
         label1.setBounds(130, 160, 300, 25);
         textmin.setBounds(450, 160, 100, 25);
+        textmin.getDocument().addDocumentListener(this);
         label2.setBounds(130, 190, 310, 25);
         textmax.setBounds(450, 190, 100, 25);
+        textmax.getDocument().addDocumentListener(this);
         button.setBounds(300, 230, 110, 25);
+        button.setEnabled(false);
         scrollPane.setBounds(28, 270, 650, 350);
 
-        this.getContentPane().add(panel);
+        getContentPane().add(panel);
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                x = Integer.parseInt(stroka.getText());
-                y = Integer.parseInt(stolbec.getText());
-                maxBoundary = Integer.parseInt(textmax.getText());
-                minBoundary = Integer.parseInt(textmin.getText());
-                calculate();
-            }
+        button.addActionListener(e -> {
+            x = Integer.parseInt(stroka.getText());
+            y = Integer.parseInt(stolbec.getText());
+            maxBoundary = Integer.parseInt(textmax.getText());
+            minBoundary = Integer.parseInt(textmin.getText());
+            calculate();
         });
 
-        this.setVisible(true);
-
+        setVisible(true);
     }
 
     private void calculate() {
@@ -97,12 +104,35 @@ public class GuiLaba3B extends JFrame {
         for (int f = 0; f < x; f++) {
             for (int h = 0; h < y; h++) {
                 arr = matrix[f][h];
-                textArea.append(String.format("%10d",arr));
+                textArea.append(String.format("%5d", arr));
             }
             textArea.append("\n");
         }
 
         negative.negativeNumberWithZeroGui(matrix, x, y);
         saddle.saddlePointGui(matrix, x, y);
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+
+    }
+
+    void action() {
+        if (!(stroka.getText().equals("") || stolbec.getText().equals("") ||
+                textmax.getText().equals("") || textmin.getText().equals("")))
+            button.setEnabled(true);
+        else
+            button.setEnabled(false);
     }
 }

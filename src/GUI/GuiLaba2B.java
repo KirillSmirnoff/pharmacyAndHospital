@@ -1,14 +1,19 @@
 package GUI;
 
 import Methods.*;
+
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.util.Arrays;
 
-public class GuiLaba2B extends JFrame {
+public class GuiLaba2B extends JFrame implements DocumentListener {
 
-    public static JTextArea textArea = new JTextArea();
+    private static JTextArea textArea = new JTextArea();
+    private JButton button = new JButton("Расчитать");
+    private JTextField textField2 = new JTextField();
+    private JTextField textField1 = new JTextField();
+    private JTextField textField = new JTextField();
     private int x, maxBoundary, minBoundary;
 
     public GuiLaba2B() {
@@ -37,34 +42,31 @@ public class GuiLaba2B extends JFrame {
         add(opisanie5);
         opisanie5.setBounds(90, 125, 350, 25);
 
-        JTextField textField = new JTextField();
         add(textField);
+        textField.getDocument().addDocumentListener(this);
         textField.setBounds(450, 60, 100, 25);
 
-        JTextField textField1 = new JTextField();
         add(textField1);
+        textField1.getDocument().addDocumentListener(this);
         textField1.setBounds(450, 90, 100, 25);
 
-        JTextField textField2 = new JTextField();
         add(textField2);
+        textField2.getDocument().addDocumentListener(this);
         textField2.setBounds(450, 120, 100, 25);
 
         JScrollPane scrollPane = new JScrollPane(textArea);
         add(scrollPane);
         scrollPane.setBounds(25, 220, 590, 220);
 
-        JButton button = new JButton("Расчитать");
         add(button);
+        button.setEnabled(false);
         button.setBounds(250, 175, 110, 25);
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                x = Integer.parseInt(textField.getText());
-                maxBoundary = Integer.parseInt(textField2.getText());
-                minBoundary = Integer.parseInt(textField1.getText());
-                calculate();
-            }
+        button.addActionListener(e -> {
+            x = Integer.parseInt(textField.getText());
+            maxBoundary = Integer.parseInt(textField2.getText());
+            minBoundary = Integer.parseInt(textField1.getText());
+            calculate();
         });
 
         setVisible(true);
@@ -73,24 +75,44 @@ public class GuiLaba2B extends JFrame {
     void calculate() {
 
         MyRandom rdm = new MyRandom(maxBoundary, minBoundary);
-        int[] aray = new int[x];
-        rdm.randomToArray(aray, x);
+        int[] array = new int[x];
+        rdm.randomToArray(array, x);
 
-        textArea.append("\nЭлементы массива" + Arrays.toString(aray) + "\n");
+        textArea.append("\nЭлементы массива" + Arrays.toString(array) + "\n");
 
         CompositeNumbers composite = new CompositeNumbers();
         PrimeNumbers prime = new PrimeNumbers();
         PerfectNumbers perfect = new PerfectNumbers();
 
-        for (int z : aray) {
-            composite.CompositeNumbersCalculate(z);
-            perfect.perfectNumbersCalculate(z);
-            prime.PrimeNumbersCalculate(z);
-        }
+        composite.CompositeNumbersCalculate(array);
+        perfect.perfectNumbersCalculate(array);
+        prime.PrimeNumbersCalculate(array);
 
-        composite.printGui();
-        prime.printGui();
-        perfect.printGui();
+        textArea.append(composite.toString());
+        textArea.append(prime.toString());
+        textArea.append(perfect.toString());
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+
+    }
+
+    void action() {
+        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("")))
+            button.setEnabled(true);
+        else
+            button.setEnabled(false);
     }
 }
 

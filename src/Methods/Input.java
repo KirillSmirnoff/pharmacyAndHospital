@@ -9,13 +9,14 @@ public class Input {
 
         boolean loop = true;
         int i = 0;
+        Scanner sc = new Scanner(System.in);
 
         do {
             try {
-                Scanner sc = new Scanner(System.in);
                 System.out.print(s);
                 i = sc.nextInt();
                 loop= false;
+//                sc.close();
 
             } catch (InputMismatchException e) {
                 System.out.println("Try again");

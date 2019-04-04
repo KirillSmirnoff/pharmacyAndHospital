@@ -1,46 +1,36 @@
 package Methods;
 
-import GUI.GuiLaba2B;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PerfectNumbers {
 
     private int perfectNumber;
-    AddToArray arrayPerfect = new AddToArray();
+    List<Integer> list = new ArrayList<>();
 
-    public void perfectNumbersCalculate(int x) {
-        int j = 1;
-        int perfect = 0;
+    public void perfectNumbersCalculate(int[] mass) {
 
-        for (; j < x; j++)
-            if (x % j == 0) {
-                perfect += j;
+        for (int x : mass) {
+            int j = 1;
+            int perfect = 0;
+
+            for (; j < x; j++)
+                if (x % j == 0) {
+                    perfect += j;
+                }
+
+            if (x == perfect) {
+                perfectNumber++;
+                list.add(x);
             }
-
-        if (x == perfect) {
-            perfectNumber++;
-            arrayPerfect.addMember(x);
         }
-    }
-
-    public void print() {
-        if (perfectNumber == 0)
-            System.out.println("совершенных чисел нет");
-        else
-            System.out.println("совершенных чисел: " + perfectNumber + toString());
-    }
-
-
-    public void printGui() {
-        if (perfectNumber == 0)
-            GuiLaba2B.textArea.append("совершенных чисел нет\n");
-        else
-            GuiLaba2B.textArea.append("совершенных чисел: " + perfectNumber + toString()+"\n");
     }
 
     @Override
     public String toString() {
-
-        return Arrays.toString(arrayPerfect.listArrayToArray());
+        if (perfectNumber == 0)
+            return "Совершенных чисел в массиве нет\n";
+        else
+            return "Совершенных чисел в массиве: " + perfectNumber + " Это числа: " + list.toString()+"\n";
     }
 }

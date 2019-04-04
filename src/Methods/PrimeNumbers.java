@@ -1,48 +1,39 @@
 package Methods;
 
-import GUI.GuiLaba2B;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrimeNumbers {
 
     private int primeNumber;
-    AddToArray arrayPrime = new AddToArray();
+    List<Integer> list = new ArrayList<>();
 
-    public void PrimeNumbersCalculate(int x) {
-        int y = 0;
-        int i = 2;
+    public void PrimeNumbersCalculate(int[] mass) {
+        for (int x : mass) {
 
-        while (i * i <= x && y != 1) {
-            if (x % i == 0) {
-                y = 1 | i++;
-            } else {
-                i++;
+            int y = 0;
+            int i = 2;
+
+            while (i * i <= x && y != 1) {
+                if (x % i == 0) {
+                    y = 1 | i++;
+                } else {
+                    i++;
+                }
+            }
+
+            if (y < 1) {
+                primeNumber++;
+                list.add(x);
             }
         }
-
-        if (y < 1) {
-            primeNumber++;
-            arrayPrime.addMember(x);
-        }
-    }
-
-    public void print(){
-        if(primeNumber==0)
-            System.out.println("простых чисел нет");
-        else
-        System.out.println("простых чисел: " + primeNumber+toString());
-    }
-
-
-    public void printGui(){
-        if(primeNumber==0)
-            GuiLaba2B.textArea.append("простых чисел нет\n");
-        else
-            GuiLaba2B.textArea.append("простых чисел: " + primeNumber+toString()+"\n");
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(arrayPrime.listArrayToArray());
+        if (primeNumber == 0)
+            return "Простых чисел в массиве нет\n";
+        else
+            return "Простых чисел в массиве: " + primeNumber + " Это числа: " + list.toString()+"\n";
     }
 }

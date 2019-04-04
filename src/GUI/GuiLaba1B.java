@@ -3,17 +3,25 @@ package GUI;
 import Methods.Fraction;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.Document;
 
-public class GuiLaba1B extends JFrame {
+public class GuiLaba1B extends JFrame implements DocumentListener {
 
     private int fr1num, fr1den, fr2num, fr2den, fr3num, fr3den;
-    JTextArea textArea = new JTextArea();
+    private JTextArea textArea = new JTextArea();
+    private JButton button = new JButton("Расчитать");
+    private JTextField textField5 = new JTextField();
+    private JTextField textField4 = new JTextField();
+    private JTextField textField3 = new JTextField();
+    private JTextField textField2 = new JTextField();
+    private JTextField textField1 = new JTextField();
+    private JTextField textField = new JTextField();
 
-    public GuiLaba1B() {
+    GuiLaba1B() {
 
-        setTitle("Лабораторная 1А");
+        setTitle("Лабораторная 1Б");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(1000, 100, 640, 480);
         setResizable(false);
@@ -32,38 +40,40 @@ public class GuiLaba1B extends JFrame {
         JLabel fraction1 = new JLabel("Дробь 1");
         add(fraction1);
         fraction1.setBounds(40, 110, 100, 25);
-        JTextField textField = new JTextField();
+
+        textField.getDocument().addDocumentListener(this);
         add(textField);
         textField.setBounds(120, 100, 40, 25);
 
-        JTextField textField1 = new JTextField();
+        textField1.getDocument().addDocumentListener(this);
         add(textField1);
         textField1.setBounds(120, 130, 40, 25);
 
         JLabel fraction2 = new JLabel("Дробь 2");
         add(fraction2);
         fraction2.setBounds(220, 110, 100, 25);
-        JTextField textField2 = new JTextField();
+
+        textField2.getDocument().addDocumentListener(this);
         add(textField2);
         textField2.setBounds(300, 100, 40, 25);
 
-        JTextField textField3 = new JTextField();
+        textField3.getDocument().addDocumentListener(this);
         add(textField3);
         textField3.setBounds(300, 130, 40, 25);
-
 
         JLabel fraction3 = new JLabel("Дробь 3");
         add(fraction3);
         fraction3.setBounds(410, 110, 100, 25);
-        JTextField textField4 = new JTextField();
+
+        textField4.getDocument().addDocumentListener(this);
         add(textField4);
         textField4.setBounds(490, 100, 40, 25);
 
-        JTextField textField5 = new JTextField();
+        textField5.getDocument().addDocumentListener(this);
         add(textField5);
         textField5.setBounds(490, 130, 40, 25);
 
-        JButton button = new JButton("Расчитать");
+        button.setEnabled(false);
         add(button);
         button.setBounds(260, 170, 110, 25);
 
@@ -71,39 +81,54 @@ public class GuiLaba1B extends JFrame {
         add(scrollPane);
         scrollPane.setBounds(25, 220, 590, 220);
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fr1num = Integer.parseInt(textField.getText());
-                fr1den = Integer.parseInt(textField1.getText());
-                fr2num = Integer.parseInt(textField2.getText());
-                fr2den = Integer.parseInt(textField3.getText());
-                fr3num = Integer.parseInt(textField4.getText());
-                fr3den = Integer.parseInt(textField5.getText());
-                calculate();
-            }
+        button.addActionListener(a -> {
+            fr1num = Integer.parseInt(textField.getText());
+            fr1den = Integer.parseInt(textField1.getText());
+            fr2num = Integer.parseInt(textField2.getText());
+            fr2den = Integer.parseInt(textField3.getText());
+            fr3num = Integer.parseInt(textField4.getText());
+            fr3den = Integer.parseInt(textField5.getText());
+
+            calculate();
         });
 
         setVisible(true);
     }
 
     private void calculate() {
-        Fraction f1 = new Fraction();
-        Fraction f2 = new Fraction();
-        Fraction f3 = new Fraction();
+        Fraction fra1 = new Fraction(fr1num, fr1den);
+        Fraction fra2 = new Fraction(fr2num, fr2den);
+        Fraction fra3 = new Fraction(fr3num, fr3den);
 
-        double a = f1.guiFractionToDecimal(fr1num, fr1den);
-        double b = f2.guiFractionToDecimal(fr2num, fr2den);
-        double c = f3.guiFractionToDecimal(fr3num, fr3den);
+        double f1 = fra1.fractionToDecimal();
+        double f2 = fra2.fractionToDecimal();
+        double f3 = fra3.fractionToDecimal();
 
-        textArea.append("\nвы ввели дроби\n" + a + "\n" + b + "\n" + c + "\n");
-
-        if ((a >= b) && (a >= c))
-            textArea.append("\nНаибольшая дробь " + a);
-        else if ((b >= a) && (b >= c))
-            textArea.append("\nНаибольшая дробь " + b);
-        else if ((c >= b) && (c >= a))
-            textArea.append("\nНаибольшая дробь " + c);
+        textArea.append(String.format("Первая дробь %,.2f %nВтороя дробь %,.2f %nТретья дробь %,.2f %n", f1, f2, f3));
+        textArea.append(String.format("%nНаибольшая дробь %,.2f %n%n", Fraction.max(f1, f2, f3)));
     }
 
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        action();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+
+    }
+
+    void action() {
+        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("") ||
+                textField3.getText().equals("") || textField4.getText().equals("") || textField5.getText().equals("")))
+            button.setEnabled(true);
+        else
+            button.setEnabled(false);
+
+    }
 }
