@@ -7,7 +7,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.util.Arrays;
 
-public class GuiLaba2B extends JFrame implements DocumentListener {
+public class GuiLaba2B extends JFrame implements Action{
+//public class GuiLaba2B extends JFrame implements DocumentListener {
 
     private static JTextArea textArea = new JTextArea();
     private JButton button = new JButton("Расчитать");
@@ -95,12 +96,12 @@ public class GuiLaba2B extends JFrame implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1,textField2);
     }
 
     @Override
     public void removeUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1,textField2);
     }
 
     @Override
@@ -108,12 +109,12 @@ public class GuiLaba2B extends JFrame implements DocumentListener {
 
     }
 
-    void action() {
-        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("")))
-            button.setEnabled(true);
-        else
-            button.setEnabled(false);
-    }
+//    void action() {
+//        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("")))
+//            button.setEnabled(true);
+//        else
+//            button.setEnabled(false);
+//    }
 }
 
 

@@ -7,7 +7,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.Document;
 
-public class GuiLaba1B extends JFrame implements DocumentListener {
+public class GuiLaba1B extends JFrame implements Action {
+//public class GuiLaba1B extends JFrame implements DocumentListener {
 
     private int fr1num, fr1den, fr2num, fr2den, fr3num, fr3den;
     private JTextArea textArea = new JTextArea();
@@ -110,12 +111,12 @@ public class GuiLaba1B extends JFrame implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1,textField2,textField3,textField4,textField5);
     }
 
     @Override
     public void removeUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1,textField2,textField3,textField4,textField5);
     }
 
     @Override
@@ -123,12 +124,12 @@ public class GuiLaba1B extends JFrame implements DocumentListener {
 
     }
 
-    void action() {
-        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("") ||
-                textField3.getText().equals("") || textField4.getText().equals("") || textField5.getText().equals("")))
-            button.setEnabled(true);
-        else
-            button.setEnabled(false);
-
-    }
+//    void action() {
+//        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("") ||
+//                textField3.getText().equals("") || textField4.getText().equals("") || textField5.getText().equals("")))
+//            button.setEnabled(true);
+//        else
+//            button.setEnabled(false);
+//
+//    }
 }

@@ -9,7 +9,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiLaba3B extends JFrame implements DocumentListener {
+public class GuiLaba3B extends JFrame implements Action {
+//public class GuiLaba3B extends JFrame implements DocumentListener {
 
     private int x, y, maxBoundary, arr, minBoundary;
     public static JTextArea textArea = new JTextArea();
@@ -115,12 +116,12 @@ public class GuiLaba3B extends JFrame implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-        action();
+        action(button,stroka,stolbec,textmax,textmin);
     }
 
     @Override
     public void removeUpdate(DocumentEvent e) {
-        action();
+        action(button,stroka,stolbec,textmax,textmin);
     }
 
     @Override
@@ -128,11 +129,11 @@ public class GuiLaba3B extends JFrame implements DocumentListener {
 
     }
 
-    void action() {
-        if (!(stroka.getText().equals("") || stolbec.getText().equals("") ||
-                textmax.getText().equals("") || textmin.getText().equals("")))
-            button.setEnabled(true);
-        else
-            button.setEnabled(false);
-    }
+//    void action() {
+//        if (!(stroka.getText().equals("") || stolbec.getText().equals("") ||
+//                textmax.getText().equals("") || textmin.getText().equals("")))
+//            button.setEnabled(true);
+//        else
+//            button.setEnabled(false);
+//    }
 }

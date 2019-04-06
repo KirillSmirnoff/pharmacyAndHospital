@@ -8,7 +8,8 @@ import java.util.Arrays;
 
 import Methods.*;
 
-public class GuiLaba3A extends JFrame implements DocumentListener {
+public class GuiLaba3A extends JFrame implements Action {
+//public class GuiLaba3A extends JFrame implements DocumentListener {
 
     private int x, maxBoundary, minBoundary;
 
@@ -94,12 +95,12 @@ public class GuiLaba3A extends JFrame implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1,textField2);
     }
 
     @Override
     public void removeUpdate(DocumentEvent e) {
-action();
+action(button,textField,textField1,textField2);
     }
 
     @Override
@@ -107,10 +108,10 @@ action();
 
     }
 
-    void action() {
-        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("")))
-            button.setEnabled(true);
-        else
-            button.setEnabled(false);
-    }
+//    void action() {
+//        if (!(textField.getText().equals("") || textField1.getText().equals("") || textField2.getText().equals("")))
+//            button.setEnabled(true);
+//        else
+//            button.setEnabled(false);
+//    }
 }

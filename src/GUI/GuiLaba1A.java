@@ -8,7 +8,8 @@ import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiLaba1A extends JFrame implements DocumentListener {
+public class GuiLaba1A extends JFrame implements Action {
+//public class GuiLaba1A extends JFrame implements DocumentListener {
 
     public static JTextArea textArea = new JTextArea();
     private JTextField textField1 = new JTextField();
@@ -76,12 +77,12 @@ public class GuiLaba1A extends JFrame implements DocumentListener {
 
     @Override
     public void insertUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1);
     }
 
     @Override
     public void removeUpdate(DocumentEvent e) {
-        action();
+        action(button,textField,textField1);
     }
 
     @Override
@@ -89,11 +90,11 @@ public class GuiLaba1A extends JFrame implements DocumentListener {
 
     }
 
-    void action() {
-        if (!(textField.getText().equals("") || textField1.getText().equals("")))
-            button.setEnabled(true);
-        else
-            button.setEnabled(false);
-
-    }
+//    void action() {
+//        if (!(textField.getText().equals("") || textField1.getText().equals("")))
+//            button.setEnabled(true);
+//        else
+//            button.setEnabled(false);
+//
+//    }
 }
