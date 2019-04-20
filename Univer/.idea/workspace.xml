@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d3ec28c9-cfb7-4b98-bd6c-0435212086d8" name="Default Changelist" comment="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Univer$Start.ic" NAME="Start Coverage Results" MODIFIED="1550240769946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="240" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="977547245">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="79" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="39" />
+          <entry key="project.open.time.6" value="31" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="80" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="159" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="159" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="59" />
+          <entry key="java" value="23752" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="23752" />
+          <entry key="PLAIN_TEXT" value="63" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="176417507">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="82" />
+          <entry key="project.open.time.0" value="10" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.5" value="15" />
+          <entry key="project.open.time.6" value="28" />
+          <entry key="project.open.time.7" value="12" />
+          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="83" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="form" value="5" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="441" />
+          <entry key="jfd" value="1" />
+          <entry key="png" value="4" />
+          <entry key="txt" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="GUI_DESIGNER_FORM" value="5" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Image" value="4" />
+          <entry key="JAVA" value="441" />
+          <entry key="JFormDesigner_form" value="1" />
+          <entry key="PLAIN_TEXT" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="24" />
+          <entry key="java" value="18441" />
+          <entry key="txt" value="2137" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="18441" />
+          <entry key="PLAIN_TEXT" value="2161" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="6" />
+          <entry key="git.branch.compare" value="1" />
+          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.rebase" value="2" />
+          <entry key="git.branch.rename" value="1" />
+          <entry key="git.checkout.as.new.branch" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="K2Test" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>about</find>
+      <find>System.</find>
+      <find>Sys</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Labaratory/Laba3A.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Laba3A.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Laba3B.java" />
+        <option value="$PROJECT_DIR$/src/GUI/TestGuiDesigner.java" />
+        <option value="$PROJECT_DIR$/src/Labaratory/Laba3B.java" />
+        <option value="$PROJECT_DIR$/src/Methods/SaddlePoint.java" />
+        <option value="$PROJECT_DIR$/about.txt" />
+        <option value="$PROJECT_DIR$/src/Methods/MyRandom.java" />
+        <option value="$PROJECT_DIR$/src/Methods/CompositeNumbers.java" />
+        <option value="$PROJECT_DIR$/src/Methods/PerfectNumbers.java" />
+        <option value="$PROJECT_DIR$/src/Methods/AddToArray.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Input.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Formula.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Fraction.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiTest.java" />
+        <option value="$PROJECT_DIR$/src/Methods/DocAction.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Methods.java" />
+        <option value="$PROJECT_DIR$/src/Methods/MaxEvenNumberMinOddNumber.java" />
+        <option value="$PROJECT_DIR$/src/Methods/NegativeNumber.java" />
+        <option value="$PROJECT_DIR$/src/GUI/first.form" />
+        <option value="$PROJECT_DIR$/src/GUI/First.java" />
+        <option value="$PROJECT_DIR$/src/GUI/First.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Test.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Test.form" />
+        <option value="$PROJECT_DIR$/src/GUI/Action.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiLaba1A.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiLaba1B.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiLaba2B.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiLaba3A.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiLaba3B.java" />
+        <option value="$PROJECT_DIR$/src/maks/laba1.java" />
+        <option value="$PROJECT_DIR$/src/maks/labs.java" />
+        <option value="$PROJECT_DIR$/src/maks/MaxEvenNumberMinOddNumber.java" />
+        <option value="$PROJECT_DIR$/src/maks/Prime.java" />
+        <option value="$PROJECT_DIR$/src/Methods/PrimeNumbers.java" />
+        <option value="$PROJECT_DIR$/src/Laboratory.java" />
+        <option value="$PROJECT_DIR$/src/maks/In.java" />
+        <option value="$PROJECT_DIR$/src/maks/MyRdm.java" />
+        <option value="$PROJECT_DIR$/src/maks/Labs.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Labs.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/window.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/window1A.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/Window.java" />
+        <option value="$PROJECT_DIR$/src/maks/Run.java" />
+        <option value="$PROJECT_DIR$/src/maks/Other/Labs.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/Window1A.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/Window2B.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/Window3A.java" />
+        <option value="$PROJECT_DIR$/src/maks/Okna/Window3B.java" />
+        <option value="$PROJECT_DIR$/src/Start.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Gui.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Univer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Univer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Univer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Univer" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="focusa&#9;PSI&#9;JAVA://java.awt.event.FocusAdapter&#10;action&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/event/ActionListener.java&#10;obje&#9;PSI&#9;JAVA://java.lang.Object&#10;nosuchel&#9;PSI&#9;JAVA://java.util.NoSuchElementException&#10;arra&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java&#10;collections&#9;PSI&#9;JAVA://java.util.Collections&#10;collection&#9;PSI&#9;JAVA://java.util.Collection&#10;compa&#9;PSI&#9;JAVA://java.lang.Comparable&#10;@functi&#9;PSI&#9;JAVA://java.lang.FunctionalInterface&#10;scann&#9;PSI&#9;JAVA://com.sun.java_cup.internal.runtime.Scanner&#10;arrayL&#9;PSI&#9;JAVA://java.util.ArrayList&#10;arrayli&#9;PSI&#9;JAVA://java.util.ArrayList&#10;thre&#9;PSI&#9;JAVA://java.lang.Thread" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555759644636" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="maks.Other" />
+      <recent name="Methods" />
+      <recent name="GUI" />
+      <recent name="Labaratory" />
+      <recent name="Laba2.B" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="maks" />
+      <recent name="GUI" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/files" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Start">
+    <configuration name="GuiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.GuiTest" />
+      <module name="Univer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Laba1B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Labaratory.Laba1B" />
+      <module name="Univer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyModAppDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="appstart.mymodappdemo.MyModAppDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="appstart.mymodappdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maks.Run" />
+      <module name="Univer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maks.Other.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Start" />
+      <module name="Univer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Laba1B" />
+      <item itemvalue="Application.Start" />
+      <item itemvalue="Application.GuiTest" />
+      <item itemvalue="Application.MyModAppDemo" />
+      <item itemvalue="Application.Run" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Start" />
+        <item itemvalue="Application.Run" />
+        <item itemvalue="Application.MyModAppDemo" />
+        <item itemvalue="Application.GuiTest" />
+        <item itemvalue="Application.Laba1B" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3ec28c9-cfb7-4b98-bd6c-0435212086d8" name="Default Changelist" comment="" />
+      <created>1539972564707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539972564707</updated>
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1547942360356</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547942360356</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1547942492713</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547942492713</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test">
+      <created>1548280345123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548280345123</updated>
+    </task>
+    <task id="LOCAL-00004" summary="work GuiLaba3A&#10;add Gui for GuiLaba3B (logic do not work yet)&#10;method MaxEvenNumberMinOddNumber edited">
+      <created>1548375477283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548375477283</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add and work GuiLaba1A, GuiLaba1B&#10;add Gui for GuiLaba2B (logic do not work yet)&#10;method Formula was edited (added new method for GUI)&#10;class Gui was edited (created new format gui)">
+      <created>1548629699002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1548629699002</updated>
+    </task>
+    <task id="LOCAL-00006" summary="29.01.19&#10;&#10;All Gui and methods work but Gui2A">
+      <created>1548772549963</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548772549963</updated>
+    </task>
+    <task id="LOCAL-00007" summary="15.02.19&#10;&#10;All Gui and methods work but Gui2&#10;delete class GuiUniver&#10;in class Laboratory change method names  laba** to solveLaboratory**&#10;create new class Input for input data&#10;in class Random methods randomToArray return type change to void&#10;in all classes Scanner API replaced by class Input &#10;class Start completely changed">
+      <created>1550240652042</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550240652042</updated>
+    </task>
+    <task id="LOCAL-00008" summary="15.02.19&#10;&#10;testBranch">
+      <created>1550248687212</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550248687212</updated>
+    </task>
+    <task id="LOCAL-00009" summary="19.03.19&#10;&#10;Was created background for GUI&#10;In class GUI was added action for &quot;exit&quot; and &quot;About&quot; &#10;In project added 2 files &quot;about.txt&quot; and &quot;politeh.png&quot;">
+      <created>1553017998816</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553017998816</updated>
+    </task>
+    <task id="LOCAL-00010" summary="25.03.19&#10;&#10;In method MyRandom iteration changed to recursion">
+      <created>1553538521122</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1553538521122</updated>
+    </task>
+    <task id="LOCAL-00011" summary="4.04.19&#10;&#10;In All GUI classes was added DocumentListener interface and implements methods. ActionListener was changed to lambda&#10;In Fraction class was deleted setters for numerator and denominator, was added method max &#10;In MaxEvenNumberMinOddNumber was deleted method MaxEvenNumberMinOddNumberGui&#10;In PrimeNumbers, PerfectNumbers and ComposireNumbers classes were deleted methods print and printGui. Was changed method toString&#10;In Laboratory class was changed method solve1B. Objects Fraction creates with parametrs">
+      <created>1554411650201</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554411650202</updated>
+    </task>
+    <task id="LOCAL-00012" summary="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes">
+      <created>1554545423201</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1554545423201</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676725" visible="true" weight="0.22838847" />
+      <window_info id="Structure" order="1" sideWeight="0.5032328" side_tool="true" weight="0.18516542" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5019305" side_tool="true" weight="0.22465315" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4941302" visible="true" weight="0.37931034" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49839914" weight="0.39870688" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32938644" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26293105" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5058698" side_tool="true" weight="0.37931034" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.30926725" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286638" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32977587" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="test" />
+    <MESSAGE value="work GuiLaba3A&#10;add Gui for GuiLaba3B (logic do not work yet)&#10;method MaxEvenNumberMinOddNumber edited" />
+    <MESSAGE value="add and work GuiLaba1A, GuiLaba1B&#10;add Gui for GuiLaba2B (logic do not work yet)&#10;method Formula was edited (added new method for GUI)&#10;class Gui was edited (created new format gui)" />
+    <MESSAGE value="29.01.19&#10;&#10;All Gui and methods work but Gui2A" />
+    <MESSAGE value="15.02.19&#10;&#10;All Gui and methods work but Gui2&#10;delete class GuiUniver&#10;in class Laboratory change method names  laba** to solveLaboratory**&#10;create new class Input for input data&#10;in class Random methods randomToArray return type change to void&#10;in all classes Scanner API replaced by class Input &#10;class Start completely changed" />
+    <MESSAGE value="15.02.19&#10;&#10;testBranch" />
+    <MESSAGE value="19.03.19&#10;&#10;Was created background for GUI&#10;In class GUI was added action for &quot;exit&quot; and &quot;About&quot; &#10;In project added 2 files &quot;about.txt&quot; and &quot;politeh.png&quot;" />
+    <MESSAGE value="25.03.19&#10;&#10;In method MyRandom iteration changed to recursion" />
+    <MESSAGE value="4.04.19&#10;&#10;In All GUI classes was added DocumentListener interface and implements methods. ActionListener was changed to lambda&#10;In Fraction class was deleted setters for numerator and denominator, was added method max &#10;In MaxEvenNumberMinOddNumber was deleted method MaxEvenNumberMinOddNumberGui&#10;In PrimeNumbers, PerfectNumbers and ComposireNumbers classes were deleted methods print and printGui. Was changed method toString&#10;In Laboratory class was changed method solve1B. Objects Fraction creates with parametrs" />
+    <MESSAGE value="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiTest.java" />
+    <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/javax/swing/event/DocumentEvent.java" />
+    <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/event/FocusAdapter.java" />
+    <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/javax/swing/text/AbstractDocument.java" />
+    <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/javax/swing/text/Document.java" />
+    <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/Methods/Methods.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/first.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/first.form" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/First.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/First.form" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/Test.form" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiLaba1B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="118" column="88" lean-forward="true" selection-start-line="118" selection-start-column="88" selection-end-line="118" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiLaba2B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/politeh.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/about.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/CompositeNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/Fraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Templates/mymodapp/appsrc/appfuncs/appfuncs/simplefuncs/SimpleMathFuncs.java" />
+    <entry file="file://$USER_HOME$/Templates/mymodapp/appsrc/appstart/appstart/mymodappdemo/MyModAppDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/gh.java" />
+    <entry file="file://$PROJECT_DIR$/src/Methods/PerfectNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/MaxEvenNumberMinOddNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maks/MaxEvenNumberMinOddNumber.java" />
+    <entry file="file://$PROJECT_DIR$/src/Methods/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/PrimeNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maks/Other/Prime.java" />
+    <entry file="file://$PROJECT_DIR$/src/Laboratory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="98" column="9" lean-forward="true" selection-start-line="81" selection-start-column="7" selection-end-line="98" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maks/Other/MyRdm.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Other/In.java" />
+    <entry file="file://$PROJECT_DIR$/src/Methods/MyRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/Formula.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiLaba1A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk/src.zip!/javax/swing/JTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="564" column="16" selection-start-line="564" selection-start-column="16" selection-end-line="564" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiLaba3A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/SaddlePoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/NegativeNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiLaba3B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="110" column="9" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maks/Run.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Okna/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Okna/Window1A.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Okna/Window2B.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Okna/Window3A.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Okna/Window3B.java" />
+    <entry file="file://$PROJECT_DIR$/src/maks/Other/Labs.java" />
+    <entry file="file://$PROJECT_DIR$/Univer.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Files/about.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Univer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
