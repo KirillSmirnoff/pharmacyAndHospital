@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ec28c9-cfb7-4b98-bd6c-0435212086d8" name="Default Changelist" comment="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d3ec28c9-cfb7-4b98-bd6c-0435212086d8" name="Default Changelist" comment="6.04.19&#10;&#10;Was deleted class AddToArray &#10;Was added interfaces Action for Gui classes" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="Univer.iml" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,13 +64,13 @@
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.4" value="6" />
           <entry key="project.open.time.5" value="15" />
           <entry key="project.open.time.6" value="28" />
           <entry key="project.open.time.7" value="12" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="83" />
+          <entry key="project.opened" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,6 +81,7 @@
           <entry key="jfd" value="1" />
           <entry key="png" value="4" />
           <entry key="txt" value="10" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -91,6 +92,7 @@
           <entry key="JAVA" value="441" />
           <entry key="JFormDesigner_form" value="1" />
           <entry key="PLAIN_TEXT" value="10" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -122,7 +124,7 @@
     <favorites_list name="K2Test" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -221,17 +223,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Univer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Univer" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
@@ -245,12 +236,23 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Univer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Univer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="focusa&#9;PSI&#9;JAVA://java.awt.event.FocusAdapter&#10;action&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/event/ActionListener.java&#10;obje&#9;PSI&#9;JAVA://java.lang.Object&#10;nosuchel&#9;PSI&#9;JAVA://java.util.NoSuchElementException&#10;arra&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java&#10;collections&#9;PSI&#9;JAVA://java.util.Collections&#10;collection&#9;PSI&#9;JAVA://java.util.Collection&#10;compa&#9;PSI&#9;JAVA://java.lang.Comparable&#10;@functi&#9;PSI&#9;JAVA://java.lang.FunctionalInterface&#10;scann&#9;PSI&#9;JAVA://com.sun.java_cup.internal.runtime.Scanner&#10;arrayL&#9;PSI&#9;JAVA://java.util.ArrayList&#10;arrayli&#9;PSI&#9;JAVA://java.util.ArrayList&#10;thre&#9;PSI&#9;JAVA://java.lang.Thread" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555761610999" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555773199470" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -474,7 +476,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676725" visible="true" weight="0.22838847" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676725" visible="true" weight="0.23105656" />
       <window_info id="Structure" order="1" sideWeight="0.5032328" side_tool="true" weight="0.18516542" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -563,7 +565,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUI/GuiTest.java" />
     <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/javax/swing/event/DocumentEvent.java" />
     <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/event/FocusAdapter.java" />
     <entry file="jar:///usr/java/jdk1.8.0_181/src.zip!/javax/swing/text/AbstractDocument.java" />
@@ -737,6 +738,9 @@
           <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
