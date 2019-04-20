@@ -226,6 +226,11 @@
               <item name="Univer" type="b2602c69:ProjectViewProjectNode" />
               <item name="Univer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Univer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Univer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -247,7 +252,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="focusa&#9;PSI&#9;JAVA://java.awt.event.FocusAdapter&#10;action&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/awt/event/ActionListener.java&#10;obje&#9;PSI&#9;JAVA://java.lang.Object&#10;nosuchel&#9;PSI&#9;JAVA://java.util.NoSuchElementException&#10;arra&#9;FILE&#9;jar:///usr/java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java&#10;collections&#9;PSI&#9;JAVA://java.util.Collections&#10;collection&#9;PSI&#9;JAVA://java.util.Collection&#10;compa&#9;PSI&#9;JAVA://java.lang.Comparable&#10;@functi&#9;PSI&#9;JAVA://java.lang.FunctionalInterface&#10;scann&#9;PSI&#9;JAVA://com.sun.java_cup.internal.runtime.Scanner&#10;arrayL&#9;PSI&#9;JAVA://java.util.ArrayList&#10;arrayli&#9;PSI&#9;JAVA://java.util.ArrayList&#10;thre&#9;PSI&#9;JAVA://java.lang.Thread" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555759644636" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555760158399" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -472,7 +477,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676725" visible="true" weight="0.22838847" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676725" visible="true" weight="0.22838847" />
       <window_info id="Structure" order="1" sideWeight="0.5032328" side_tool="true" weight="0.18516542" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -481,14 +486,14 @@
       <window_info id="Favorites" order="6" sideWeight="0.5019305" side_tool="true" weight="0.22465315" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4941302" visible="true" weight="0.37931034" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4941302" weight="0.37931034" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49839914" weight="0.39870688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32938644" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.26293105" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5058698" side_tool="true" weight="0.37931034" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.30926725" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.30926725" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286638" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
