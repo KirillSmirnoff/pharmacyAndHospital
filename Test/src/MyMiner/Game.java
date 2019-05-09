@@ -1,8 +1,9 @@
 package MyMiner;
 
 import javafx.application.Application;
-import javafx.event.EventTarget;
-import javafx.event.EventType;
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.Background;
@@ -13,8 +14,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
 import java.util.Random;
 
 public class Game extends Application {
@@ -27,7 +26,15 @@ public class Game extends Application {
         GameField() {
             setPrefSize(60, 60);
 //            setBackground(new Background(new BackgroundFill(Color.BROWN,null,null)));
-//            addEventHandler(MouseEvent.MOUSE_CLICKED,);
+            addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    if(event.getButton()==MouseButton.PRIMARY)
+                        System.out.println("primary");
+                    if(event.getButton()==MouseButton.SECONDARY)
+                        System.out.println("secondary");
+                }
+            });
         }
     }
 
