@@ -4,13 +4,13 @@ class GameObject {
 
     boolean isMine;
     boolean isOpen;
-    public int x,y;
+    boolean isFlag;
+    int x,y;
     int countMineNeighbors;
 
-    public GameObject(boolean isMine, int x, int y) {
+    GameObject(boolean isMine, int x, int y) {
         this.isMine = isMine;
         this.x = x;
         this.y = y;
     }
-
 }
