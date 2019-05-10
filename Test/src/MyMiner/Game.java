@@ -25,7 +25,7 @@ public class Game extends Application {
             this.x=x;
             this.y=y;
             setPrefSize(60, 60);
-            setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE,null,null)));
+//            setBackground(new Background(new BackgroundFill(Color.GRAY,null,null)));
             addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
                         if (event.getButton() == MouseButton.PRIMARY)
                             setMouseLeftClick(x,y);
@@ -58,13 +58,20 @@ public class Game extends Application {
     }
 
     void setValueCell(int x, int y, String s) {
-        Text text1 = new Text(s);
-        text1.setFill(Color.BLACK);
-        text1.setFont(Font.font("Helvetica", FontPosture.ITALIC, 50));
-        matrix[y][x].getChildren().add(text1);
-    }
+        if(!matrix[y][x].getChildren().isEmpty()) {
+            matrix[y][x].getChildren().remove(0);
+        }
+            Text text1 = new Text(s);
+            text1.setFill(Color.BLACK);
+            text1.setFont(Font.font("Helvetica", FontPosture.ITALIC, 50));
+            matrix[y][x].getChildren().add(text1);
+        }
+
 
     void setValueNumber(int x,int y,int count){
+        if(!matrix[y][x].getChildren().isEmpty()) {
+            matrix[y][x].getChildren().remove(0);
+        }
         String s =""+count;
         Text text1 = new Text(s);
         text1.setFill(Color.RED);
