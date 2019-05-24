@@ -1,4 +1,4 @@
-package MyMiner;
+package MyTestProject.MyMiner;
 
 class GameObject {
 

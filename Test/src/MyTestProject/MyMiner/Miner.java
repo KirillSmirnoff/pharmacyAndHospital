@@ -1,4 +1,4 @@
-package MyMiner;
+package MyTestProject.MyMiner;
 
 
 import javafx.scene.paint.Color;
@@ -141,7 +141,7 @@ public class Miner extends Game {
 
     private void gameOver() {
         isStopped = true;
-        JOptionPane.showMessageDialog(null, "konez", "wse", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, "You lose", "The End", JOptionPane.ERROR_MESSAGE);
     }
 
     private void restart() {
@@ -154,6 +154,6 @@ public class Miner extends Game {
     private void win() {
         isStopped = true;
 //        JOptionPane.showMessageDialog(Color.ALICEBLUE,"pizdec",Color.BLACK,48);
-        JOptionPane.showMessageDialog(null, "pobedil", "wse", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, "You win", "The End", JOptionPane.ERROR_MESSAGE);
     }
 }

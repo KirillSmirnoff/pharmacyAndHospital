@@ -1,4 +1,4 @@
-package MyMiner;
+package MyTestProject.MyMiner;
 
 import javafx.application.Application;
 import javafx.scene.input.MouseButton;
