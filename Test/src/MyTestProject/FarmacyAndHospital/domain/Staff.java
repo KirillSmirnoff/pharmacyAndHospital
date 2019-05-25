@@ -10,13 +10,4 @@ public class Staff extends Person {
         System.out.println(drug + " was added to data base");
     }
 
-    @Override
-    public void searchDrugByName(String drug) {
-        super.searchDrugByName(drug);
-    }
-
-    @Override
-    public void getDescription(String drug) {
-        super.getDescription(drug);
-    }
 }

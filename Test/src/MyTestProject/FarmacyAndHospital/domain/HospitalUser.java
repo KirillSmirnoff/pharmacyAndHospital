@@ -14,13 +14,4 @@ public class HospitalUser extends Person {
         super(role);
     }
 
-    @Override
-    public void searchDrugByName(String drug) {
-        super.searchDrugByName(drug);
-    }
-
-    @Override
-    public void getDescription(String drug) {
-        super.getDescription(drug);
-    }
 }
