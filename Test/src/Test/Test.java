@@ -1,14 +1,33 @@
+package Test;
+
 import java.io.IOException;
-import java.util.Random;
-//import javafx.c
+import java.util.*;
 
 class Test {
 
     public static void main(String[] args) {
 
-        Random rdm = new Random();
-        int i = rdm.nextInt(10);
-        System.out.println(i);
+
+        Map<Dobi,Integer> dolg = new TreeMap<>(new MyComporator());
+        dolg.put(new Dobi("Misha","Sokovksi"),100);
+        dolg.put(new Dobi("Ilya","Petrushkov"),130);
+        dolg.put(new Dobi("Aza","Babayew"),200);
+        dolg.put(new Dobi("Gosh","Annamade"),160);
+        dolg.put(new Dobi("Murt", "Murtuzalin"),10);
+        dolg.put(new Dobi("Meren","Monro"),200);
+        dolg.put(new Dobi("Meret","Soroklet"),101);
+        dolg.put(new Dobi("Mazyan","Chikmazyan"),5);
+        dolg.put(new Dobi("Maxandrn","Mozovski"),19);
+
+        Set<Map.Entry<Dobi, Integer>> entries = dolg.entrySet();
+        for(Map.Entry<Dobi,Integer> me : entries) {
+            System.out.print(me.getKey().name + " "+me.getKey().lastNmae+" ");
+            System.out.printf("%5d  %n",me.getValue());
+        }
+
+//        Random rdm = new Random();
+//        int i = rdm.nextInt(10);
+//        System.out.println(i);
 
 //        Runtime runtime = Runtime.getRuntime();
 //        Process exec = null;
@@ -18,6 +37,15 @@ class Test {
 //        } catch (IOException e) {
 //            System.out.println("not found command");
 //        }
+    }
+
+   static class Dobi {
+        String name, lastNmae ;
+
+         Dobi(String n, String ln){
+            lastNmae=ln;
+            name=n;
+        }
     }
 
 
@@ -137,4 +165,12 @@ class Test {
     public static String make_Readable(int seconds) {
             return String.format("%02d:%02d:%02d", seconds / 3600, (seconds / 60) % 60, seconds % 60);
         }
+}
+
+class MyComporator implements Comparator<Test.Dobi>{
+    @Override
+    public int compare(Test.Dobi o1, Test.Dobi o2) {
+
+        return o1.name.compareTo(o2.name);
+    }
 }

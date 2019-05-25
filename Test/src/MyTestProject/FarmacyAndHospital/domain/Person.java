@@ -13,4 +13,12 @@ public class Person {
     public Person(Role role) {
         this.role = role;
     }
+
+    public void searchDrugByName(String drug) {
+        System.out.println("not found  " + drug + " in data base");
+    }
+
+    public void getDescription(String drug) {
+        System.out.println(drug + " is perfect drug for your friends");
+    }
 }

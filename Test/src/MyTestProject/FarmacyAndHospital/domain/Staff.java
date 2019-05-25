@@ -1,6 +1,6 @@
 package MyTestProject.FarmacyAndHospital.domain;
 
-public class Staff extends PharmacyUser {
+public class Staff extends Person {
 
     public Staff(Role role) {
         super(role);
