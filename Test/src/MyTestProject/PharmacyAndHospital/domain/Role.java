@@ -1,4 +1,4 @@
-package MyTestProject.FarmacyAndHospital.domain;
+package MyTestProject.PharmacyAndHospital.domain;
 
 public class Role {
     long id;

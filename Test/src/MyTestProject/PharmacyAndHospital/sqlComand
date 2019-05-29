@@ -53,3 +53,6 @@ create table list_of_drugs(
     id serial not null primary key ,
     dosage varchar(50)
 );
+
+//insert into role (role_name, description, status) values ('Administrator','Data base administrator',true);
+//update role set description = 'Hospital Staff' where id=2;

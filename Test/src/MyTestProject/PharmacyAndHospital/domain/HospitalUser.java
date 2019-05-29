@@ -1,4 +1,4 @@
-package MyTestProject.FarmacyAndHospital.domain;
+package MyTestProject.PharmacyAndHospital.domain;
 
 import java.util.Date;
 import java.util.Map;

@@ -1,13 +1,21 @@
-package MyTestProject.FarmacyAndHospital;
+package MyTestProject.PharmacyAndHospital;
 
-import MyTestProject.FarmacyAndHospital.domain.*;
-import MyTestProject.FarmacyAndHospital.validator.RegisterChecker;
+import MyTestProject.PharmacyAndHospital.domain.*;
+import MyTestProject.PharmacyAndHospital.validator.RegisterChecker;
 
 import java.util.Scanner;
 
 
 public class Start {
+
     public static void main(String[] args) {
+
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+
         String log, pass;
         Scanner sc = new Scanner(System.in);
         RegisterChecker checker = new RegisterChecker();
@@ -46,9 +54,6 @@ public class Start {
             hospitalUser.searchDrugByName("Эспумизан");
 
         } else
-            checker.register();
+            checker.register(log, pass);
     }
-
-
 }
-
