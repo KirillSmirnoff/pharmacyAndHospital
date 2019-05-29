@@ -33,7 +33,7 @@ public class Start {
 
             Staff staff = (Staff) person;
 
-            staff.addDrug("ХАНКА");
+            staff.addDrug();
             staff.getDescription("НОСОЛГИН");
             staff.searchDrugByName("НОЩ-ПА");
 

@@ -72,7 +72,6 @@ public class RegisterChecker {
 
     public void register() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("let register");
         int index=0;
         try(Connection con = ConnectToBase.connect();
             PreparedStatement stmt = con.prepareStatement(REG_DB)) {
