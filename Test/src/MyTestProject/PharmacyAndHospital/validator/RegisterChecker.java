@@ -7,10 +7,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class RegisterChecker {
 
-    public static final String INSERT = "SELECT role from pharmacy_client where login= ? and password = ?";
+    private static final String CHECK_DB = "SELECT role from pharmacy_client where login= ? and password = ?";
+
+    private static final String REG_DB = "INSERT INTO pharmacy_client(first_name, last_name, login, password, " +
+            "phone_number, email) VALUES (?, ?, ?, ?, ?, ?)";
 
     private static final String ADMIN = "Administrator";
     private static final String PHARM = "PharmacyUser";
@@ -35,7 +39,7 @@ public class RegisterChecker {
         String permission = "";
 
         try (Connection con = ConnectToBase.connect();
-             PreparedStatement stmt = con.prepareStatement(INSERT)) {
+             PreparedStatement stmt = con.prepareStatement(CHECK_DB)) {
 
             con.setAutoCommit(false);
 
@@ -66,8 +70,40 @@ public class RegisterChecker {
         return new Person(new Role(permission));
     }
 
-    public void register(String log, String pass) {
+    public void register() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("let register");
-//        ConnectToBase.connect(log,pass);
+        int index=0;
+        try(Connection con = ConnectToBase.connect();
+            PreparedStatement stmt = con.prepareStatement(REG_DB)) {
+
+            con.setAutoCommit(false);
+
+            try {
+                System.out.print("Enter First name > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Enter Last name > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Enter login > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Enter password > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Enter phone number > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Enter email > ");
+                stmt.setString(++index,sc.next());
+                System.out.print("Done");
+
+                stmt.executeUpdate();
+                con.commit();
+            } catch (SQLException e) {
+                con.rollback();
+                e.printStackTrace();
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

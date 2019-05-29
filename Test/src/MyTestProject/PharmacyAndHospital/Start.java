@@ -54,6 +54,6 @@ public class Start {
             hospitalUser.searchDrugByName("Эспумизан");
 
         } else
-            checker.register(log, pass);
+            checker.register();
     }
 }
