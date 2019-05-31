@@ -29,31 +29,28 @@ public class Start {
         Person person = checker.checkLogin(log, pass);
 
         if (person instanceof Staff) {
-            System.out.println("i am admin");
 
             Staff staff = (Staff) person;
 
             staff.addDrug();
-            staff.getDescription("НОСОЛГИН");
-            staff.searchDrugByName("НОЩ-ПА");
 
         } else if (person instanceof PharmacyUser) {
-            System.out.println("i am pharmacy user");
 
             PharmacyUser pharmacyUser = (PharmacyUser) person;
 
-            pharmacyUser.getDescription("Глазолин");
-            pharmacyUser.searchDrugByName("Бензин");
+//            pharmacyUser.getDescription(sc.next());
 
-        } else if (person instanceof HospitalUser) {
-            System.out.println("i am a hospital user");
-
-            HospitalUser hospitalUser = (HospitalUser) person;
-
-            hospitalUser.getDescription("Шприц");
-            hospitalUser.searchDrugByName("Эспумизан");
-
-        } else
+            pharmacyUser.searchDrugByName(sc.next());
+        }
+//        } else if (person instanceof HospitalUser) {
+//            System.out.println("i am a hospital user");
+//
+//            HospitalUser hospitalUser = (HospitalUser) person;
+//
+//            hospitalUser.getDescription("Шприц");
+//            hospitalUser.searchDrugByName("Эспумизан");
+//        }
+         else
             checker.register();
     }
 }
