@@ -21,7 +21,7 @@ public class RegisterChecker {
     private static final String HOSPITAL = "HospitalUser";
 //    private static final String DOC = "Doctor";
 
-    public Person checkLogin(String log, String pass) {
+    public Person login(String log, String pass) {
 
         Person person = checkInDB(log, pass);
 

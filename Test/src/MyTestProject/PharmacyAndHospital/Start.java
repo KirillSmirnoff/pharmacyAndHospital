@@ -26,7 +26,7 @@ public class Start {
         System.out.print("Password: >");
         pass = sc.next();
 
-        Person person = checker.checkLogin(log, pass);
+        Person person = checker.login(log, pass);
 
         if (person instanceof Staff) {
 
@@ -38,7 +38,7 @@ public class Start {
 
             PharmacyUser pharmacyUser = (PharmacyUser) person;
 
-//            pharmacyUser.getDescription(sc.next());
+            pharmacyUser.getDescription(sc.next());
 
             pharmacyUser.searchDrugByName(sc.next());
         }

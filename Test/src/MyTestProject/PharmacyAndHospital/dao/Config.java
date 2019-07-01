@@ -13,17 +13,17 @@ public class Config {
 
     private static Properties properties = new Properties();
 
-    public static String getConfig(String propertie){
+    public static String getConfig(String properties){
 
         try(InputStream stream = Config.class.getClassLoader().getResourceAsStream(SOURCE)){
 
-            properties.load(stream);
+            Config.properties.load(stream);
 
         }catch (IOException ex){
             ex.printStackTrace();
         }
 
 
-        return properties.getProperty(propertie);
+        return Config.properties.getProperty(properties);
     }
 }
