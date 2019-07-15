@@ -1,4 +1,4 @@
-package PharmacyAndHospital.domain;
+package domain;
 
 public class Drug {
     long id;

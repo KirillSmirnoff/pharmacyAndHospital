@@ -1,4 +1,4 @@
-package PharmacyAndHospital.validator;
+package validator;
 
 import PharmacyAndHospital.dao.ConnectToBase;
 import PharmacyAndHospital.domain.*;

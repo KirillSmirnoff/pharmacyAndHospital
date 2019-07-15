@@ -1,4 +1,4 @@
-package PharmacyAndHospital.domain;
+package domain;
 
 import PharmacyAndHospital.dao.ConnectToBase;
 

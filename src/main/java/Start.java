@@ -1,5 +1,3 @@
-package PharmacyAndHospital;
-
 import PharmacyAndHospital.domain.*;
 import PharmacyAndHospital.validator.RegisterChecker;
 
