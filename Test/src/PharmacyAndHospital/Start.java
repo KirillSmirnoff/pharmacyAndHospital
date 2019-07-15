@@ -1,7 +1,7 @@
-package MyTestProject.PharmacyAndHospital;
+package PharmacyAndHospital;
 
-import MyTestProject.PharmacyAndHospital.domain.*;
-import MyTestProject.PharmacyAndHospital.validator.RegisterChecker;
+import PharmacyAndHospital.domain.*;
+import PharmacyAndHospital.validator.RegisterChecker;
 
 import java.util.Scanner;
 

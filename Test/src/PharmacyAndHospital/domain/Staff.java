@@ -1,6 +1,6 @@
-package MyTestProject.PharmacyAndHospital.domain;
+package PharmacyAndHospital.domain;
 
-import MyTestProject.PharmacyAndHospital.dao.ConnectToBase;
+import PharmacyAndHospital.dao.ConnectToBase;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

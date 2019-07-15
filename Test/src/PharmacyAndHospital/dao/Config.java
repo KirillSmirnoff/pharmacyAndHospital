@@ -1,4 +1,4 @@
-package MyTestProject.PharmacyAndHospital.dao;
+package PharmacyAndHospital.dao;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +9,7 @@ public class Config {
     public static final String URL = "url";
     public static final String LOG = "log";
     public static final String PASS = "pass";
-    private static final String SOURCE= "MyTestProject/PharmacyAndHospital/connectProperties";
+    private static final String SOURCE= "PharmacyAndHospital/connectProperties";
 
     private static Properties properties = new Properties();
 

@@ -1,7 +1,7 @@
-package MyTestProject.PharmacyAndHospital.validator;
+package PharmacyAndHospital.validator;
 
-import MyTestProject.PharmacyAndHospital.dao.ConnectToBase;
-import MyTestProject.PharmacyAndHospital.domain.*;
+import PharmacyAndHospital.dao.ConnectToBase;
+import PharmacyAndHospital.domain.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
