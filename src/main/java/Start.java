@@ -1,5 +1,8 @@
-import PharmacyAndHospital.domain.*;
-import PharmacyAndHospital.validator.RegisterChecker;
+
+import domain.Person;
+import domain.PharmacyUser;
+import domain.Staff;
+import validator.RegisterChecker;
 
 import java.util.Scanner;
 

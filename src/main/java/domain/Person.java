@@ -1,6 +1,7 @@
 package domain;
 
-import PharmacyAndHospital.dao.ConnectToBase;
+
+import dao.ConnectToBase;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

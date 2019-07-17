@@ -1,7 +1,8 @@
 package validator;
 
-import PharmacyAndHospital.dao.ConnectToBase;
-import PharmacyAndHospital.domain.*;
+
+import dao.ConnectToBase;
+import domain.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
