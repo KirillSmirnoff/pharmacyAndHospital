@@ -1,8 +1,8 @@
-package validator;
+package ru.k2.pharmacy_hospital.validator;
 
 
-import dao.ConnectToBase;
-import domain.*;
+import ru.k2.pharmacy_hospital.dao.ConnectToBase;
+import ru.k2.pharmacy_hospital.domain.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,57 +18,57 @@ public class RegisterChecker {
             "phone_number, email) VALUES (?, ?, ?, ?, ?, ?)";
 
     private static final String ADMIN = "Administrator";
-    private static final String PHARM = "PharmacyUser";
+    private static final String PHARM = "PharmacyClient";
     private static final String HOSPITAL = "HospitalUser";
 //    private static final String DOC = "Doctor";
 
-    public Person login(String log, String pass) {
+    public void login(String log, String pass) {
 
-        Person person = checkInDB(log, pass);
+//        Person person = checkInDB(log, pass);
 
-        if (ADMIN.equals(person.role.roleName))
-            return new Staff(new Role(ADMIN));
-        else if (PHARM.equals(person.role.roleName))
-            return new PharmacyUser(new Role(PHARM));
-        else if (HOSPITAL.equals(person.role.roleName))
-            return new HospitalUser(new Role(HOSPITAL));
+//        if (ADMIN.equals(person.role.roleName))
+//            return new PharmacyAdministrativeRole(new PharmacyRole(ADMIN));
+//        else if (PHARM.equals(person.role.roleName))
+//            return new PharmacyClient(new PharmacyRole(PHARM));
+//        else if (HOSPITAL.equals(person.role.roleName))
+//            return new HospitalUser(new PharmacyRole(HOSPITAL));
+//
+//        else return null;
+//    }
 
-        else return null;
-    }
-
-    private Person checkInDB(String log, String pass) {
-        String permission = "";
-
-        try (Connection con = ConnectToBase.connect();
-             PreparedStatement stmt = con.prepareStatement(CHECK_DB)) {
-
-            con.setAutoCommit(false);
-
-            try {
-                stmt.setString(1, log);
-                stmt.setString(2, pass);
-//                          statement.setString(3, pass);
-
-                ResultSet resultSet = stmt.executeQuery();
-
-//                ResultSet genKeys = stmt.getGeneratedKeys();
-
-                if (resultSet.next())
-                    permission = resultSet.getString("role");
-
-                con.commit();
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-                con.rollback();
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        }
-
-        return new Person(new Role(permission));
+//    private Person checkInDB(String log, String pass) {
+//        String permission = "";
+//
+//        try (Connection con = ConnectToBase.connect();
+//             PreparedStatement stmt = con.prepareStatement(CHECK_DB)) {
+//
+//            con.setAutoCommit(false);
+//
+//            try {
+//                stmt.setString(1, log);
+//                stmt.setString(2, pass);
+////                          statement.setString(3, pass);
+//
+//                ResultSet resultSet = stmt.executeQuery();
+//
+////                ResultSet genKeys = stmt.getGeneratedKeys();
+//
+//                if (resultSet.next())
+//                    permission = resultSet.getString("role");
+//
+//                con.commit();
+//
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//                con.rollback();
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//
+//        }
+//
+////        return new Person(new PharmacyRole(permission));
     }
 
     public void register() {

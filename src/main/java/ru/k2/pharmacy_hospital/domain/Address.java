@@ -1,4 +1,4 @@
-package domain;
+package ru.k2.pharmacy_hospital.domain;
 
 public class Address  {
     long id;

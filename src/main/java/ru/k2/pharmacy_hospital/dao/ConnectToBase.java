@@ -1,4 +1,4 @@
-package dao;
+package ru.k2.pharmacy_hospital.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

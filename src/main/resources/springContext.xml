@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="ru.k2.pharmacy_hospital.domain.Person">
+        <constructor-arg ref="pharmacyUser"/>
+    </bean>
+    <bean id="address" class="ru.k2.pharmacy_hospital.domain.Address"/>
+    <bean id="drug" class="ru.k2.pharmacy_hospital.domain.Drug"/>
+    <bean class="ru.k2.pharmacy_hospital.domain.PharmacyUser" id="pharmacyUser"/>
+    <bean class="ru.k2.pharmacy_hospital.domain.PharmacyStaff" id="pharmacyStaff"/>
+
+</beans>
