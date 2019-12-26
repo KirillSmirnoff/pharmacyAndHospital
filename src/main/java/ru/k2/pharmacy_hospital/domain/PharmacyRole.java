@@ -1,6 +1,8 @@
 package ru.k2.pharmacy_hospital.domain;
 
-public interface PharmacyRole {
+import java.io.Serializable;
+
+public interface PharmacyRole extends Serializable {
 
     void searchDrugByName(String drug);
 
