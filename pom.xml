@@ -30,6 +30,18 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>5.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.0.0.Final</version>
@@ -40,7 +52,13 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.4.jre7</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+        </dependency>
+
     </dependencies>
 
-    
 </project>
