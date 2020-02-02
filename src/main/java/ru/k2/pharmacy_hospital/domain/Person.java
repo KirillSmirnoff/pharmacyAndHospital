@@ -38,11 +38,6 @@ public class Person {
     private String phoneNumber;
 
     private String email;
-    private boolean status;
     private String gender;
-    private int role;
 
-    public String getPassword() {
-        return password;
-    }
 }

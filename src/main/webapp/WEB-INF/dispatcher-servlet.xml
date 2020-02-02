@@ -2,15 +2,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <context:component-scan base-package="ru.k2.pharmacy_hospital"/>
 
     <tx:annotation-driven proxy-target-class="true"/>
-    <context:component-scan base-package="ru.k2.pharmacy_hospital"/>
+    <mvc:annotation-driven />
+<!--    <context:component-scan base-package="ru.k2.pharmacy_hospital"/>-->
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/Hosp_Fharma"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/pharmacy"/>
         <property name="username" value="postgres"/>
         <property name="password" value="0"/>
     </bean>
@@ -33,5 +35,10 @@
  объект-советник во все компоненты, отмеченные аннотацией @Repository , который будет перехватывать
  все специфические исключения и  преобразовывать их в соответствующие неконтролируемые исключения Spring.-->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 
 </beans>

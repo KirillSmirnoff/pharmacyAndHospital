@@ -29,17 +29,17 @@ create table address(
     apartment varchar(10)
 );
 
-create table person(
+create table users(
     id SERIAL not null primary key,
     first_name varchar(20) not null ,
     last_name varchar(20) not null ,
     login varchar(50) not null ,
     password varchar(50) not null,
-    birthday date not null,
-    disease varchar(100) not null,
-    phone_number varchar(20) not null,
+    birthday date,
+    disease varchar(100),
+    phone_number varchar(20),
     email varchar(50),
-    status boolean default true
+    gender varchar(6),
 );
 
 create table pharmacy_client(
