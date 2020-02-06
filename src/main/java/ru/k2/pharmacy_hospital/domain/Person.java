@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
@@ -14,11 +15,11 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class Person {
+public class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+    int Id;
 
     @Column(name = "first_name")
     private String firstName;

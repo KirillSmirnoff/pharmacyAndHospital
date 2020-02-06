@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class HibernateDao {
 
-    private  SessionFactory sessionFactory;
+    private   SessionFactory sessionFactory;
 
     @Autowired
     public HibernateDao(SessionFactory sessionFactory) {

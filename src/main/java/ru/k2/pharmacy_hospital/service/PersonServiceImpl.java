@@ -10,18 +10,27 @@ import java.util.List;
 
 @Service
 @Transactional
-public class PharmacyServiceImpl implements PharmacyService{
+public class PersonServiceImpl implements PersonService {
 
 
-    private HibernateDao pharmacyDao;
+    private HibernateDao dao;
 
     @Autowired
-    public void setPharmacyDao(HibernateDao pharmacyDao) {
-        this.pharmacyDao = pharmacyDao;
+    public void setDao(HibernateDao dao) {
+        this.dao = dao;
+    }
+    @Override
+    public Person getPersonByName() {
+        return dao.getSession().get(Person.class,1);
+    }
+
+    @Override
+    public void savePerson(Person person) {
+        dao.getSession().save(person);
     }
 
     @Override
     public List<Person> findAll() {
-        return pharmacyDao.getSession().createCriteria(Person.class).list();
+        return dao.getSession().createCriteria(Person.class).list();
     }
 }
