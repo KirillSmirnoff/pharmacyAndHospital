@@ -15,6 +15,8 @@
 <body>
 <hi>регистрируемся</hi>
 
+
+
     <s:form method="post" modelAttribute="person">
         <fieldset>
                 <s:input path="firstName" id="name"/>
@@ -28,6 +30,8 @@
             <input type="submit" value="Регистрация">
         </fieldset>
     </s:form>
+<a href="/account/list" >Отмена</a>
+
 
 </body>
 </html>

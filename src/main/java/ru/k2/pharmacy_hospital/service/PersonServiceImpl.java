@@ -19,18 +19,29 @@ public class PersonServiceImpl implements PersonService {
     public void setDao(HibernateDao dao) {
         this.dao = dao;
     }
+
     @Override
-    public Person getPersonByName() {
-        return dao.getSession().get(Person.class,1);
+    public Person getPersonById(int id) {
+        return dao.getSession().get(Person.class,id);
     }
 
     @Override
     public void savePerson(Person person) {
-        dao.getSession().save(person);
+        dao.getSession().saveOrUpdate(person);
     }
 
     @Override
-    public List<Person> findAll() {
+    public List findAll() {
         return dao.getSession().createCriteria(Person.class).list();
+    }
+
+    @Override
+    public void deletePerson(int id) {
+        dao.getSession().delete(getPersonById(id));
+    }
+
+    @Override
+    public void editPerson(Person person) {
+        savePerson(person);
     }
 }

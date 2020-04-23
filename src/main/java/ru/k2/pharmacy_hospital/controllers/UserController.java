@@ -3,48 +3,58 @@ package ru.k2.pharmacy_hospital.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import ru.k2.pharmacy_hospital.domain.Person;
 import ru.k2.pharmacy_hospital.service.PersonServiceImpl;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/account")
 public class UserController {
 
-    private  PersonServiceImpl service;
+    private  PersonServiceImpl personService;
 
     @Autowired
     public UserController(PersonServiceImpl service) {
-        this.service = service;
+        this.personService = service;
     }
 
-//    @RequestMapping(value = "/list", method = RequestMethod.GET)
-//    public String getUsers(Model uiMOdel) {
-//           List<Person> personList = service.findAll();
-//           uiMOdel.addAttribute("person",personList);
-//        return "list";
-//    }
-
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping("list")
     public String getUsers(Model uiMOdel) {
-//        Person personList = service.getPersonByName();
-        uiMOdel.addAttribute("person",service.getPersonByName());
-        return "starter";
+           List personList = personService.findAll();
+           uiMOdel.addAttribute("person",personList);
+        return "user-list";
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.GET)
+    @GetMapping("{id}")
+    public String deletePerson(@PathVariable("id") int id){
+        personService.deletePerson(id);
+        return "redirect: /account/list";
+    }
+
+    @GetMapping("/register")
     public String registerForm(Model uiModel){
         uiModel.addAttribute(new Person());
-        return "/register";
+        return "user-register";
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @PostMapping("/register")
     public String registerUser(Person person){
-        service.savePerson(person);
-        return "redirect:/" ;
+        personService.savePerson(person);
+        return "redirect:/account/list" ;
+    }
+
+    @GetMapping("edit/{id}")
+    public String editPersonForm(@PathVariable("id") int id, Model uiModel){
+        uiModel.addAttribute("person",personService.getPersonById(id));
+        return "user-update";
+    }
+
+    @PostMapping("edit/{id}")
+    public String editPerson(Person person){
+        personService.savePerson(person);
+        return "redirect: /account/list";
     }
 
 }
