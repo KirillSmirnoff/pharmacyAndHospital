@@ -35,22 +35,22 @@
  все специфические исключения и  преобразовывать их в соответствующие неконтролируемые исключения Spring.-->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        <property name="prefix" value="/jsp/"/>-->
+<!--        <property name="suffix" value=".jsp"/>-->
+<!--    </bean>-->
+
+
+    <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/jsp/"/>
-        <property name="suffix" value=".jsp"/>
+        <property name="suffix" value=".html"/>
     </bean>
-
-
-<!--    <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">-->
-<!--        <property name="prefix" value="/view/"/>-->
-<!--        <property name="suffix" value=".html"/>-->
-<!--    </bean>-->
 <!---->
-<!--    <bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">-->
-<!--        <property name="templateResolver" ref="templateResolver"/>-->
-<!--    </bean>-->
+    <bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver"/>
+    </bean>
 <!---->
-<!--    <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">-->
-<!--        <property name="templateEngine" ref="templateEngine"/>-->
-<!--    </bean>-->
+    <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine"/>
+    </bean>
 </beans>

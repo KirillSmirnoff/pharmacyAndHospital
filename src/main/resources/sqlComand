@@ -14,7 +14,6 @@ CREATE TABLE drug(
   pharma_group varchar(50) not null ,
   form_and_pack varchar(50) not null,
   status boolean default true
-
 );
 
 create table address(
