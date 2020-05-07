@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.k2.pharmacy_hospital.domain.Drug;
 import ru.k2.pharmacy_hospital.service.DrugServiceImpl;
 
-import javax.jws.WebParam;
 import java.util.List;
 
 @Controller

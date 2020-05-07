@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/account")
 public class UserController {
 
-    private  PersonServiceImpl personService;
+    private final PersonServiceImpl personService;
 
     @Autowired
     public UserController(PersonServiceImpl service) {
@@ -21,9 +21,9 @@ public class UserController {
     }
 
     @GetMapping("list")
-    public String getUsers(Model uiMOdel) {
+    public String getUsers(Model uiModel) {
            List personList = personService.findAll();
-           uiMOdel.addAttribute("person",personList);
+           uiModel.addAttribute("person",personList);
         return "user-list";
     }
 
@@ -42,7 +42,7 @@ public class UserController {
     @PostMapping("/register")
     public String registerUser(Person person){
         personService.savePerson(person);
-        return "redirect:/account/list" ;
+        return "redirect: /account/list" ;
     }
 
     @GetMapping("edit/{id}")

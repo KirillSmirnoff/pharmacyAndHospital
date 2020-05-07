@@ -40,17 +40,17 @@
 <!--        <property name="suffix" value=".jsp"/>-->
 <!--    </bean>-->
 
-
     <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
-        <property name="prefix" value="/jsp/"/>
+        <property name="prefix" value="/templates/"/>
         <property name="suffix" value=".html"/>
     </bean>
-<!---->
+
     <bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
         <property name="templateResolver" ref="templateResolver"/>
     </bean>
-<!---->
+
     <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
         <property name="templateEngine" ref="templateEngine"/>
+        <property name="characterEncoding" value="UTF-8"/>
     </bean>
 </beans>
