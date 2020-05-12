@@ -8,17 +8,16 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Component
-@Table(name = "drug")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "drug")
 public class Drug implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    Long id;
 
     @Column(name = "drug_name")
     String drugName;
@@ -36,3 +35,5 @@ public class Drug implements Serializable {
     String formAndPack;
 //    boolean status;
 }
+
+

@@ -8,18 +8,19 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
 public class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int Id;
+    Long Id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -29,6 +30,11 @@ public class Person implements Serializable {
 
     private String login;
     private String password;
+
+    @ManyToMany
+            @JoinTable(name = "roles_users" , joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    Set<Role> roles = new HashSet<>();
 
 //    @Temporal(TemporalType.DATE)
     private Date birthday;

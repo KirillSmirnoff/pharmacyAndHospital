@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form  action="#" th:action="@{/login}" method="post">
+
+    <label for="username">Логин</label>
+    <input id="username"     name="username"   type="text" /><br>
+
+    <label for="password">Пароль</label>
+    <input type="password"  name="password" id="password"/><br>
+    <input name="commit" type="submit" value="Sign In" />
+</form>
+<a href="/account/list" >Отмена</a>
+
+</body>
+</html>

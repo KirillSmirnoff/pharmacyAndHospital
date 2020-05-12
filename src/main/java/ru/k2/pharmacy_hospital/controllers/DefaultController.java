@@ -14,4 +14,9 @@ public class DefaultController {
     public String start(Model uiModel){
         return "starter";
     }
+//
+    @GetMapping("logining")
+    public  String login(Model model){
+        return "logining";
+    }
 }
