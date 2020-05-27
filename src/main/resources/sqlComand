@@ -1,18 +1,18 @@
 drop table  if exists drug;
 drop table  if exists address;
 drop  table  if exists users cascade ;
-drop table  if exists roles_users;
+drop table  if exists roles_users cascade ;
 drop table  if exists list_of_drugs;
 
 CREATE TABLE drug(
   id bigserial not null primary key,
-  drug_name varchar(25) not null ,
-  product_type varchar(100) not null ,
+  drug_name varchar(150) not null ,
+  product_type varchar(150) not null ,
   active_ingreds varchar(100) not null ,
-  manufacturer varchar(100) not null ,
-  country_origin varchar(50) not null ,
-  pharma_group varchar(50) not null ,
-  form_and_pack varchar(50) not null,
+  manufacturer varchar(150) not null ,
+  country_origin varchar(100) not null ,
+  pharma_group varchar(100) not null ,
+  form_and_pack varchar(100) not null,
   status boolean default true
 );
 
@@ -87,6 +87,26 @@ INSERT INTO drug(drug_name, product_type, active_ingreds,manufacturer, country_o
                                                                                                                             'Македония/Россия', 'Антибиотик-азалид', 'Таблетки, покрытые пленочной оболочкой - 3 шт в уп');
 INSERT INTO drug(drug_name, product_type, active_ingreds,manufacturer, country_origin, pharma_group, form_and_pack) VALUES ('Бом-бенге', 'Лекарственные средства', 'Метилсалицилат', 'Тульская фармацевтическая фабрика, ООО',
                                                                                                                             'Россия', 'Противовоспал. средствоместного применения ', 'Мазь для наружного применения -25,0 в уп');
+
+
+insert into users (first_name, last_name, login, password)
+values ('Mr','Smith','smity','123');
+
+update  users set password ='$2a$04$yvoatW.D28OWiVLJpru3p.yo4irNJ6PTmMhX2/eaVTD.aY1Ma8D7y' where login='smity';
+
+select   login ,  password, true  from users where login = 'k2';
+select login, 'Administrato' from users where login = 'k2';
+
+select * from roles_users;
+
+select  login, (select role_name from  roles where id =
+                                                   (select  role_id from roles_users left join  users on  roles_users.user_id=
+                                                                                                          (select  id from users where login= ?)))     from users where login= ?;
+
+
+insert into  roles_users  (user_id, role_id) values (2,2);
+
+ALTER  TABLE  users add column  role varchar(50);
 
 
 insert into roles (role_name, description, status) values ('User','Data base administrator',true);

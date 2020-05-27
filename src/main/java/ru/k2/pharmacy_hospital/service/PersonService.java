@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface PersonService {
     List findAll() ;
-    Person getPersonById(int id);
+    Person getPersonById(Long id);
     void savePerson(Person person);
-    void deletePerson(int id);
+    void deletePerson(Long id);
     void editPerson(Person person);
 }

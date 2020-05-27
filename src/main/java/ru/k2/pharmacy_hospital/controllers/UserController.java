@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public String deletePerson(@PathVariable("id") int id){
+    public String deletePerson(@PathVariable("id") Long id){
         personService.deletePerson(id);
         return "redirect: /account/list";
     }
@@ -48,7 +48,7 @@ public class UserController {
     }
 
     @GetMapping("edit/{id}")
-    public String editPersonForm(@PathVariable("id") int id, Model uiModel){
+    public String editPersonForm(@PathVariable("id") Long id, Model uiModel){
         uiModel.addAttribute("person",personService.getPersonById(id));
         return "user-update";
     }
@@ -58,5 +58,13 @@ public class UserController {
         personService.savePerson(person);
         return "redirect: /account/list";
     }
+
+//        @GetMapping("byname")   // МЕТОД НА БУДУЮЩЕЕ
+//    public  String byname(@RequestParam("search") String s , Model model){
+//        Person person = personService.getPersonById(Long.parseLong(s));
+////        List person = personService.getPersonByName(s);
+//            model.addAttribute("person",person);
+//            return "starter";
+//    }
 
 }

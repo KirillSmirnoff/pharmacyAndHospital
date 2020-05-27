@@ -1,19 +1,17 @@
 package ru.k2.pharmacy_hospital.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.HashSet;
+import java.io.Serializable;
 import java.util.Set;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter @Setter
 @Entity
 @Table(name = "roles")
-public class Role {
+public class Role implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +22,10 @@ public class Role {
 
     String description;
 
-    @ManyToMany(mappedBy = "roles")
-    Set<Person> users = new HashSet<>();
+    @ManyToMany(cascade = CascadeType.REMOVE)
+    @JoinTable( name = "roles_users",
+        joinColumns = @JoinColumn (name = "role_id"), inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+ private   Set<Person> users ;
+
 }

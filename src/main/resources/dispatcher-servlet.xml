@@ -9,13 +9,13 @@
        http://www.springframework.org/schema/context   http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-       http://www.springframework.org/schema/security  https://www.springframework.org/schema/security/spring-security.xsd" >
+       http://www.springframework.org/schema/security  https://www.springframework.org/schema/security/spring-security.xsd">
 
     <context:component-scan base-package="ru.k2.pharmacy_hospital"/>
     <tx:annotation-driven proxy-target-class="true"/>
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
-<!--    Блок настройки для работы с БД-->
+    <!--    Блок настройки для работы с БД-->
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
@@ -44,12 +44,12 @@
  все специфические исключения и  преобразовывать их в соответствующие неконтролируемые исключения Spring.-->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
-<!--    Блок  настройки ViewResolver'a  -->
+    <!--    Блок  настройки ViewResolver'a  -->
 
-<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-<!--        <property name="prefix" value="/jsp/"/>-->
-<!--        <property name="suffix" value=".jsp"/>-->
-<!--    </bean>-->
+    <!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+    <!--        <property name="prefix" value="/jsp/"/>-->
+    <!--        <property name="suffix" value=".jsp"/>-->
+    <!--    </bean>-->
 
     <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/templates/"/>
@@ -65,16 +65,17 @@
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
 
-<!--    Блок настройки Security-->
+    <!--    Блок настройки Security-->
 
     <security:global-method-security secured-annotations="enabled"/>
 
-    <bean name="passwordEncoder"
-                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <constructor-arg name="strength" value="11"/>
+    </bean>
 
     <security:jdbc-user-service data-source-ref="dataSource" id="securityJdbc"
-            users-by-username-query="select   login ,  password, true  from users where login = ?;"
-            authorities-by-username-query="select login, 'ROLE_ADMIN' from users where login = ?;"/>
+                                users-by-username-query="select   login ,  password, true  from users where login = ?;"
+                                authorities-by-username-query="select login, 'ROLE_ADMIN' from users where login = ?;"/>
 
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="securityJdbc">
@@ -82,16 +83,16 @@
         </security:authentication-provider>
     </security:authentication-manager>
 
-    <security:http auto-config="true"    use-expressions="true">
+    <security:http auto-config="true" use-expressions="true">
         <security:form-login
                 login-page="/logining"
                 login-processing-url="/login"
                 authentication-failure-url="/logining"/>
         <!--                default-target-url="/account/list"-->
-        <security:http-basic />
-        <security:logout />
-<!--        <security:intercept-url pattern="/" access="isAuthenticated()"/>-->
-<!--        <security:intercept-url pattern="/account/list" access="hasRole('Admin')"/>-->
+        <security:http-basic/>
+        <security:logout/>
+        <!--        <security:intercept-url pattern="/" access="isAuthenticated()"/>-->
+        <!--        <security:intercept-url pattern="/account/list" access="hasRole('Admin')"/>-->
     </security:http>
 
 </beans>

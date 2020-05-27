@@ -1,9 +1,6 @@
 package ru.k2.pharmacy_hospital.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,11 +8,12 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "users")
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter @Setter
+@Entity
+@Table(name = "users")
 public class Person implements Serializable {
 
     @Id
@@ -31,10 +29,8 @@ public class Person implements Serializable {
     private String login;
     private String password;
 
-    @ManyToMany
-            @JoinTable(name = "roles_users" , joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    Set<Role> roles = new HashSet<>();
+    @ManyToMany(mappedBy ="users" )
+      private   Set<Role> roles = new HashSet<>() ;
 
 //    @Temporal(TemporalType.DATE)
     private Date birthday;
