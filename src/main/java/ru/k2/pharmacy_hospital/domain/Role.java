@@ -22,10 +22,7 @@ public class Role implements Serializable {
 
     String description;
 
-    @ManyToMany(cascade = CascadeType.REMOVE)
-    @JoinTable( name = "roles_users",
-        joinColumns = @JoinColumn (name = "role_id"), inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
+    @ManyToMany(mappedBy = "roles" )
  private   Set<Person> users ;
 
 }

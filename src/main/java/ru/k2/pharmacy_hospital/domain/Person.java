@@ -29,7 +29,10 @@ public class Person implements Serializable {
     private String login;
     private String password;
 
-    @ManyToMany(mappedBy ="users" )
+    @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.PERSIST})
+    @JoinTable(name = "roles_users",
+        joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
       private   Set<Role> roles = new HashSet<>() ;
 
 //    @Temporal(TemporalType.DATE)

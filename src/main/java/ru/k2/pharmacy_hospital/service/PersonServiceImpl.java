@@ -57,9 +57,9 @@ public class PersonServiceImpl implements PersonService {
                savePerson(person);
     }
 
-    public List getPersonByName(String username) {
-        return dao.getSession().createQuery("from Person p where p.login= :name")
-                .setParameter("name", username).list();
+    public Person getPersonByName(String username) {
+        return (Person)dao.getSession().createQuery("from Person p where p.login= :name")
+                .setParameter("name", username).uniqueResult();
     }
 
 }
