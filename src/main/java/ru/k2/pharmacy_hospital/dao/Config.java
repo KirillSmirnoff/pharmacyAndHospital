@@ -6,6 +6,8 @@ import java.util.Properties;
 
 public class Config {
 
+//    надо бы все переписать на конфигурационные файлы
+
     public static final String URL = "url";
     public static final String LOG = "log";
     public static final String PASS = "pass";
